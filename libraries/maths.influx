@@ -1,4 +1,4 @@
-# Given properties a and b, returns the lesser.
+
 min
 	prefit
 		a input a
@@ -24,7 +24,6 @@ assert
 		b pair min
 	output expect equal
 	
-# Given properties a and b, returns the greater.
 max
 	prefit
 		a input a
@@ -50,7 +49,6 @@ assert
 		b pair max
 	output expect equal
 	
-# Calculates the square of an integer or float.
 square
 	output input split multiply
 	
@@ -60,7 +58,7 @@ assert
 		b 3 square
 	output expect equal
 	
-# Adds 1 to an integer.
+
 increment
 	temp
 		a input
@@ -73,7 +71,6 @@ assert
 		b 6
 	output expect equal
 	
-# Subtracts 1 from an integer.
 decrement
 	temp
 		a input
@@ -86,7 +83,6 @@ assert
 		b 4
 	output expect equal
 	
-# Doubles an integer or float.
 double
 	output input split add
 	
@@ -96,7 +92,6 @@ assert
 		b 16
 	output expect equal
 	
-# Doubles a float.
 double
 	output input split add
 	
@@ -106,7 +101,6 @@ assert
 		b 8.3
 	output expect equal
 	
-# Halves a float, not rounding.
 halve
 	temp
 		a input
@@ -119,7 +113,6 @@ assert
 		b 4.15
 	output expect equal
 	
-# Halves an integer, rounding up.
 halveUp
 	temp
 		a input
@@ -138,7 +131,6 @@ assert
 		b 4
 	output expect equal
 	
-# Halves an integer, rounding down.
 halveDown
 	temp
 		a input

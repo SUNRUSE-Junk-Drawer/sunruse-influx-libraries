@@ -1,5 +1,3 @@
-# Calls "add" between the pairs' "a"s and "b"s, returning the results in a 
-# new pair.
 add
 	output
 		a input intersperse a add
@@ -31,8 +29,7 @@ assert
 		b temp add b
 	output expect equal	
 		
-# Calls "subtact" between the pairs' "a"s and "b"s, returning the results in a 
-# new pair.
+
 subtract
 	output
 		a input intersperse a subtract
@@ -64,8 +61,6 @@ assert
 		b temp subtract b
 	output expect equal	
 	
-# Calls "multiply" between the pairs' "a"s and "b"s, returning the results in a 
-# new pair.
 multiply
 	output
 		a input intersperse a multiply
@@ -97,8 +92,6 @@ assert
 		b temp multiply b
 	output expect equal	
 	
-# Calls "divide" between the pairs' "a"s and "b"s, returning the results in a 
-# new pair.	
 divide
 	output
 		a input intersperse a divide
@@ -130,8 +123,6 @@ assert
 		b temp divide b
 	output expect equal	
 	
-# Calculates the square of the magnitude of a pair representing a 2D vector.
-# Faster than "magnitude".
 magnitudeSquared
 	output input split multiply add
 	
@@ -144,8 +135,6 @@ assert
 		b temp magnitudeSquared
 	output expect equal
 	
-# Calculates the square of the distance between a pair of pairs representing 2D 
-# vectors.  Faster than "distance".
 distanceSquared
 	output input subtract magnitudeSquared
 	
@@ -162,7 +151,6 @@ assert
 		b temp distanceSquared
 	output expect equal
 	
-# Calculates the dot product of a pair of pairs representing 2D vectors.
 dot
 	output input multiply add
 	
@@ -179,7 +167,6 @@ assert
 		b temp dot
 	output expect equal
 
-# Turns a pair representing a 2D vector 90 degrees counter-clockwise.
 counterClockwise
 	output
 		a input b negate
@@ -203,7 +190,6 @@ assert
 		b temp counterClockwise b
 	output expect equal
 
-# Turns a pair representing a 2D vector 90 degrees clockwise.
 clockwise
 	output
 		a input b

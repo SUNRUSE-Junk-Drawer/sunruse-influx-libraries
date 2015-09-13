@@ -1,141 +1,99 @@
-SUNRUSE.influx is an experimental pure functional programming language where every program compiles to run in constant time.  It also uses a pattern matching approach inspired by CSS's specificity system wherein the most specific function which compiles wins.  While every program is statically typed once compiled, they are loosely typed at compile-time.
+This is a collection of libraries users of SUNRUSE.influx may find useful.  
 
-There is only one statement to learn: the function declaration.
+# Usage
+The NPM package both contains these libraries, and a small JavaScript module for finding the absolute paths to them.  Call with the name of the library you wish to find as a string as the argument to get the absolute path returned as a string.
 
-	# Begin by naming your function.
-	helloWorld
-		
-		# We can create a temporary variable by naming it and then following it with an expression.
-		# An expression starts with a value and then a chain of function names.
-		cubeRootOf2 2.0 sqrt sqrt
-		
-		# You can additionally create objects containing multiple named values, or even nest them.
-		parentObj
-			# To access this, use "parentObj childObj".
-			childObj
-				# To access this, use "parentObj childObj val1"
-				val1 true
-				val2 false
-				val3 5
-				# You may reference temporary variables as values.
-				val4 cubeRootOf2
-		
-		# To get data from the function input, use "input" as a value.
-		tempVar input propertyName
-		
-		# Finally, define the output for your function.  The syntax is the same as in temporary variables.
-		output
-			thingOne cubeRootOf2
-			thingTwo parentObj childObj val3
-			thingThree tempVar
-		
-When multiple functions exist with the same name, whichever is the most specific which compiles wins:
+# Testing
+Assertions are included, but are not ran by this project.  Instead, they should be ran by each individual platform's build process.  To do this, assuming a Jasmine environment, call the NPM package's "selfTest" function with a platform instance to run under.
 
-	# Returns true given:
-	#	bounds
-	#		left
-	#		right
-	#		top (positive)
-	#		bottom (negative)
-	#	point
-	#		a
-	#		b
-	# when the point is within the bounds.
-	intersects
-		leftPair
-			a input bounds left
-			b input point a
-		rightPair
-			a input bounds right
-			b input point a
-		bottomPair
-			a input bounds bottom
-			b input point b
-		bottomCrossed bottomPair greaterThan
-		topPair
-			a input bounds top
-			b input point b
-		topCrossed topPair lessThan
-		
-		leftRight
-			a leftPair greaterThan
-			b rightPair lessThan
-		topBottom
-			a leftPair greaterThan
-			b rightPair lessThan	
-		total
-			a leftRight or
-			b topBottom or
-		output total or		
-	
-	# Returns true given:
-	#	circle
-	#		radius
-	#		origin
-	#			a
-	#			b	
-	#	point
-	#		a
-	#		b
-	# when the point is within the circle.
-	intersects
-		pointOrigin
-			a input point
-			b input circle origin
-		distanceRadius 
-			a pointOrigin subtract magnitude
-		    b input circle radius
-		output
-		
-The following primitive types exist by default:
+# Libraries
+The names of these libraries are listed as an array of strings in the NPM package's "list" property.
 
-| Name  | Literal examples      |
-| ----- | --------------------- |
-| bool  | true false            |
-| int   | 0 -4 7                |
-| float | 0.0 0.4 4.5 -0.7 -7.3 |
+## pairs
+Generic operations for working with pairs.  Pairs are objects containing the properties "a" and "b".
 
-The following functions are natively implemented by default:
+### Functions
+#### intersperse
+Given a pair of pairs, returns a pair of pairs where:
+* "a" contains "a" from both of the given pairs as "a" and "b".
+* "b" contains "b" from both of the given pairs as "a" and "b".
 
-* add a int, b int -> int
-* add a float, b float -> float
-* subtract a int, b int -> int
-* subtract a float, b float -> float
-* multiply a int, b int -> int
-* multiply a float, b float -> float
-* divide a int, b int -> int
-* divideUp a int, b int -> int
-* divideDown a int, b int -> int
-* divide a float, b float -> float
-* negate int -> int
-* negate float -> float
-* equal a int, b int -> bool
-* equal a float, b float -> bool
-* less a int, b int -> bool
-* less a float, b float -> bool
-* lessOrEqual a int, b int -> bool
-* lessOrEqual a float, b float -> bool
-* greater a int, b int -> bool
-* greater a float, b float -> bool
-* greaterOrEqual a int, b int -> bool
-* greaterOrEqual a float, b float -> bool
-* not bool -> bool
-* or a bool, b bool -> bool
-* and a bool, b bool -> bool
-* xor a bool, b bool -> bool
-* switch a, b, on bool -> anything
-* sqrt float -> float
-* pow base int, exp int -> int
-* pow base float, exp float -> float
-* log float -> float
-* sin float -> float
-* cos float -> float
-* tan float -> float
-* asin float -> float
-* acos float -> float
-* atan float -> float
-* atan2 a float, b float -> float
-* floor float -> float
-* ceil float -> float
-* toFloat int -> float
-* toInt float -> int 
+This can be used to compare the items in two pairs more easily as it groups the matchin properties.
+
+#### split
+Given anything, returns a pair where both "a" and "b" are the input.
+
+#### swap
+Given a pair, returns the same items, but with the values of "a" and "b" swapped.
+
+## maths
+Common basic mathematical operations.
+
+### Requires
+* pairs
+
+### Functions
+
+#### min
+Given properties "a" and "b", returns the lesser.
+
+#### max
+Given properties "a" and "b", returns the greater.
+
+#### square
+Calculates the square of a given integer or float.
+
+#### increment
+Adds 1 to a given integer.
+
+#### decrement
+Subtracts 1 from a given integer.
+
+#### double
+Doubles a given integer or float.
+
+#### halve
+Halves a given float, not rounding.
+
+#### halveUp
+Halves an integer, rounding up.
+
+#### halveDown
+Halves an integer, rounding down.
+
+## vectors-2d
+Mathematical operations on pairs of integers or floats describing 2D vectors.
+
+### Requires
+* pairs
+* maths
+
+### Functions
+
+#### add
+Calls "add" between the given pairs' "a"s and "b"s, returning the results in a new pair.
+
+#### subtract
+Calls "subtact" between the given pairs' "a"s and "b"s, returning the results in a new pair.
+
+#### multiply
+Calls "multiply" between the given pairs' "a"s and "b"s, returning the results in a new pair.
+
+#### divide
+Calls "divide" between the given pairs' "a"s and "b"s, returning the results in a new pair.	
+
+#### magnitudeSquared
+Returns the square of the magnitude of a given pair representing a 2D vector.  Faster than "magnitude".
+
+#### distance
+Returns the square of the distance between the given pair of pairs representing 2D 
+vectors.  Faster than "distance".
+
+#### dot
+Return the dot product of the given pair of pairs representing 2D vectors.
+
+#### counterClockwise
+Turns a pair representing a 2D vector 90 degrees counter-clockwise; that is, negating "b" and then swapping "a"/"b".
+
+#### clockwise
+Turns a pair representing a 2D vector 90 degrees clockwise; that is, negating "a" and then swapping "a"/"b".
