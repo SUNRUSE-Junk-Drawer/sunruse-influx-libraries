@@ -1,0 +1,1 @@
+require("./index.js").selfTest(require("sunruse-influx-platforms-javascript")())

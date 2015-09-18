@@ -7,11 +7,15 @@
     "sunruse-influx-toolchain": "^1.0.2"
   },
   "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-jasmine-nodejs": "^1.4.3",
+    "sunruse-influx-platforms-javascript": "0.0.6"
   },
-  "scripts": {
-  },
+  "scripts": {},
   "files": [
-    "libraries", "index.js"
+    "libraries",
+    "index.js"
   ],
   "repository": {
     "type": "git",
