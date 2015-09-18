@@ -97,3 +97,68 @@ Turns a pair representing a 2D vector 90 degrees counter-clockwise; that is, neg
 
 #### clockwise
 Turns a pair representing a 2D vector 90 degrees clockwise; that is, negating "a" and then swapping "a"/"b".
+
+## lists
+Operations on linked lists, of the form:
+
+    item 5
+	next
+		item 7
+		next
+			item 3
+			
+Indexes are 1-based; 0 is used as a "not-in-list" index.
+
+### Requires
+* pairs
+* maths
+
+### Functions
+
+#### max
+Returns the greatest item in a given list by comparing them using the "max" function.
+
+#### min
+Returns the least item in a given list by comparing them using the "min" function.
+
+#### add
+Returns the sum of the items in a given list by adding them all together using the "add" function.
+
+#### multiply
+Returns the product of the items in a given list by multiplying them all together using the "multiply" function.
+
+#### contains
+Given:
+* find: A value to find.
+* list: A list to search.
+Returns true when "list" contains at least one instance of "find", comparing using the "equal" function, and false when not.  
+
+#### length
+Given a list, returns the number of items in the list, as an integer. 
+
+#### firstIndex
+Given:
+* find: A value to find.
+* list: A list to search.
+Returns the 1-based index of the first instance of "find" in "list" as an integer, comparing using the "equal" function.  If not present, 0 is returned.
+
+#### lastIndex
+Given:
+* find: A value to find.
+* list: A list to search.
+Returns the 1-based index of the last instance of "find" in "list" as an integer, comparing using the "equal" function.  If not present, 0 is returned.
+
+#### count
+Given:
+* find: A value to find.
+* list: A list to search.
+Returns the number of instances of "find" in "list" as an integer, comparing using the "equal" function.
+
+#### unique
+Given a list, returns true when all of the items are unique, and false when at least one is different, comparing using the "equal" function.
+
+#### same
+Given a list, returns true when all of the items are the same, and false when at least one is different, comparing using the "equal" function.
+
+#### reverse
+Given a list, returns the same items in reverse order.

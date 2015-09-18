@@ -2,7 +2,7 @@ var path = require("path");
 module.exports = function(libraryName) {
 	return path.join(__dirname, "libraries", libraryName + ".influx");
 }
-module.exports.list = ["pairs", "maths", "vectors-2d"];
+module.exports.list = ["pairs", "maths", "vectors-2d", "lists"];
 module.exports.selfTest = function(platform) {
 	describe("standard libary self-test", function(){
 		var toolchain = require("sunruse-influx-toolchain");
