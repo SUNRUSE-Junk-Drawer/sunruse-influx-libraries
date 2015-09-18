@@ -4,7 +4,7 @@ This is a collection of libraries users of SUNRUSE.influx may find useful.
 The NPM package both contains these libraries, and a small JavaScript module for finding the absolute paths to them.  Call with the name of the library you wish to find as a string as the argument to get the absolute path returned as a string.
 
 # Testing
-Assertions are included, but are not ran by this project.  Instead, they should be ran by each individual platform's build process.  To do this, assuming a Jasmine environment, call the NPM package's "selfTest" function with a platform instance to run under.
+Assertions are included, and can be ran for the "sunruse-influx-platforms-javascript" platform using "grunt watch".  However, they should be ran by each individual platform's build process.  To do this, assuming a Jasmine environment, call the NPM package's "selfTest" function with a platform instance to run under.
 
 # Libraries
 The names of these libraries are listed as an array of strings in the NPM package's "list" property.
