@@ -6,6 +6,8 @@ module.exports = (grunt) ->
             "grunt-contrib-clean"
         ]
         
+    grunt.registerTask "build", ["clean", "concat", "jasmine_nodejs"]
+        
     grunt.initConfig
         jasmine_nodejs:
             options:
@@ -28,4 +30,4 @@ module.exports = (grunt) ->
             options:
                 atBegin: true
             files: ["src/**/*"]
-            tasks: ["clean", "concat", "jasmine_nodejs"]
+            tasks: "build"

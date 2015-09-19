@@ -14,7 +14,9 @@
     "grunt-jasmine-nodejs": "^1.4.3",
     "sunruse-influx-platforms-javascript": "0.0.6"
   },
-  "scripts": {},
+  "scripts": {
+    "prepublish": "grunt build"
+  },
   "files": [
     "deploy",
     "index.js"
