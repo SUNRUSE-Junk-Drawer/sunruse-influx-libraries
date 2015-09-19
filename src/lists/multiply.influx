@@ -1,0 +1,52 @@
+multiply
+	output input item
+
+multiply
+	pair
+		a input item
+		b input next multiply
+	output pair multiply
+	
+assert
+	list
+		item 4
+	expect
+		a list multiply
+		b 4
+	output expect equal
+	
+assert
+	list
+		item 4
+		next
+			item 6
+	expect
+		a list multiply
+		b 24
+	output expect equal
+	
+assert
+	list
+		item 4
+		next
+			item 6
+			next
+				item 3
+	expect
+		a list multiply
+		b 72
+	output expect equal
+	
+assert
+	list
+		item 4
+		next
+			item 6
+			next
+				item 3
+				next
+					item 9
+	expect
+		a list multiply
+		b 648
+	output expect equal

@@ -1,0 +1,58 @@
+removeFirst
+	output input next
+
+assert
+	list
+		item 3
+		next
+			item 5
+	expect
+		a list removeFirst item
+		b 5
+	output expect equal
+
+assert
+	list
+		item 3
+		next
+			item 5
+	expect
+		a list removeFirst length
+		b 1
+	output expect equal
+
+assert
+	list
+		item 3
+		next
+			item 5
+			next
+				item 6
+	expect
+		a list removeFirst item
+		b 5
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 5
+			next
+				item 6
+	expect
+		a list removeFirst next item
+		b 6
+	output expect equal
+
+assert
+	list
+		item 3
+		next
+			item 5
+			next
+				item 6
+	expect
+		a list removeFirst length
+		b 2
+	output expect equal

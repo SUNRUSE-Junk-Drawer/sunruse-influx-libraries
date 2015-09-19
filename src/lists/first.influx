@@ -1,0 +1,32 @@
+first
+	output input item
+	
+assert
+	list
+		item 3
+	expect
+		a list first
+		b 3
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 4
+	expect
+		a list first
+		b 3
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 4
+			next
+				item 5
+	expect
+		a list first
+		b 3
+	output expect equal

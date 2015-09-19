@@ -1,0 +1,47 @@
+halve
+	temp
+		a input
+		b 2.0
+	output temp divide
+	
+assert
+	expect
+		a 8.3 halve
+		b 4.15
+	output expect equal
+	
+halveUp
+	temp
+		a input
+		b 2
+	output temp divideUp
+	
+assert
+	expect
+		a 8 halveUp
+		b 4
+	output expect equal
+	
+assert
+	expect
+		a 7 halveUp
+		b 4
+	output expect equal
+	
+halveDown
+	temp
+		a input
+		b 2
+	output temp divideDown
+	
+assert
+	expect
+		a 8 halveDown
+		b 4
+	output expect equal
+	
+assert
+	expect
+		a 7 halveDown
+		b 3
+	output expect equal

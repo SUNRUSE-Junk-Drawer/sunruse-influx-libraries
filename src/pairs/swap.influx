@@ -1,0 +1,22 @@
+swap
+	output
+		a input b
+		b input a
+		
+assert
+	temp
+		a 3
+		b 6
+	expect
+		a 6
+		b temp swap a
+	output expect equal
+	
+assert
+	temp
+		a 3
+		b 6
+	expect
+		a 3
+		b temp swap b
+	output expect equal

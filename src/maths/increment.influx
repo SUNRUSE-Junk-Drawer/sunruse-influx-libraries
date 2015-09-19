@@ -1,0 +1,11 @@
+increment
+	temp
+		a input
+		b 1
+	output temp add
+	
+assert
+	expect
+		a 5 increment
+		b 6
+	output expect equal

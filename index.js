@@ -1,6 +1,6 @@
 var path = require("path");
 module.exports = function(libraryName) {
-	return path.join(__dirname, "libraries", libraryName + ".influx");
+	return path.join(__dirname, "deploy", libraryName + ".influx");
 }
 module.exports.list = ["pairs", "maths", "vectors-2d", "lists"];
 module.exports.selfTest = function(platform) {

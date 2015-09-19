@@ -1,0 +1,30 @@
+subtract
+	output
+		a input intersperse a subtract
+		b input intersperse b subtract		
+		
+assert
+	temp
+		a
+			a 3
+			b 5
+		b
+			a 7
+			b 4
+	expect
+		a -4
+		b temp subtract a
+	output expect equal
+	
+assert
+	temp
+		a
+			a 3
+			b 5
+		b
+			a 7
+			b 4
+	expect
+		a 1
+		b temp subtract b
+	output expect equal	

@@ -1,0 +1,52 @@
+add
+	output input item
+
+add
+	pair
+		a input item
+		b input next add
+	output pair add
+	
+assert
+	list
+		item 4
+	expect
+		a list add
+		b 4
+	output expect equal
+	
+assert
+	list
+		item 4
+		next
+			item 6
+	expect
+		a list add
+		b 10
+	output expect equal
+	
+assert
+	list
+		item 4
+		next
+			item 6
+			next
+				item 3
+	expect
+		a list add
+		b 13
+	output expect equal
+	
+assert
+	list
+		item 4
+		next
+			item 6
+			next
+				item 3
+				next
+					item 9
+	expect
+		a list add
+		b 22
+	output expect equal

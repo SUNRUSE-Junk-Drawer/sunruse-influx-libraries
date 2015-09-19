@@ -1,0 +1,61 @@
+append
+	addItem
+		list input list reverse
+		item input item
+	output addItem prepend reverse
+
+assert
+	query
+		list
+			item 3
+		item 4
+	expect
+		a query append item
+		b 3
+	output expect equal
+	
+assert
+	query
+		list
+			item 3
+		item 4
+	expect
+		a query append next item
+		b 4
+	output expect equal
+	
+assert
+	query
+		list
+			item 3
+			next
+				item 5
+		item 4
+	expect
+		a query append item
+		b 3
+	output expect equal
+	
+assert
+	query
+		list
+			item 3
+			next
+				item 5
+		item 4
+	expect
+		a query append next item
+		b 5
+	output expect equal
+	
+assert
+	query
+		list
+			item 3
+			next
+				item 5
+		item 4
+	expect
+		a query append next next item
+		b 4
+	output expect equal

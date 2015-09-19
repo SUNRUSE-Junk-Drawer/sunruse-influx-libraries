@@ -1,0 +1,15 @@
+distanceSquared
+	output input subtract magnitudeSquared
+	
+assert
+	temp
+		a
+			a 3
+			b 5
+		b
+			a 12
+			b 1
+	expect
+		a 97
+		b temp distanceSquared
+	output expect equal

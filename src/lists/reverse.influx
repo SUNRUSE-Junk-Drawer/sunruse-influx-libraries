@@ -1,0 +1,36 @@
+reverse
+	output input
+	
+reverse
+	move
+		item input last
+		list input removeLast reverse
+	output move prepend
+
+assert
+	list
+		item 3
+	expect
+		a list reverse item
+		b 3
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 5
+	expect
+		a list reverse item
+		b 5
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 5
+	expect
+		a list reverse next item
+		b 3
+	output expect equal

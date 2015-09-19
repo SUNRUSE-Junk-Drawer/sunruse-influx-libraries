@@ -1,0 +1,202 @@
+count
+	pair
+		a input list item
+		b input find
+	selector
+		a 0
+		b 1
+		on pair equal
+	output selector switch
+	
+count 
+	pair
+		a input list item
+		b input find
+	next
+		find input find
+		list input list next
+	selector
+		a next count
+		b next count increment
+		on pair equal
+	output selector switch
+	
+assert
+	query
+		list
+			item 1
+		find 2
+	expect
+		a query count
+		b 0
+	output expect equal
+	
+assert
+	query
+		list
+			item 2
+		find 2
+	expect
+		a query count
+		b 1
+	output expect equal
+	
+assert
+	query
+		list
+			item 1
+			next
+				item 3
+		find 2
+	expect
+		a query count
+		b 0
+	output expect equal
+	
+assert
+	query
+		list
+			item 2
+			next
+				item 3
+		find 2
+	expect
+		a query count
+		b 1
+	output expect equal
+	
+assert
+	query
+		list
+			item 1
+			next
+				item 2
+		find 2
+	expect
+		a query count
+		b 1
+	output expect equal
+	
+assert
+	query
+		list
+			item 2
+			next
+				item 2
+		find 2
+	expect
+		a query count
+		b 2
+	output expect equal
+	
+assert
+	query
+		list
+			item 1
+			next
+				item 3
+				next
+					item 4
+		find 2
+	expect
+		a query count
+		b 0
+	output expect equal
+	
+assert
+	query
+		list
+			item 2
+			next
+				item 3
+				next
+					item 4
+		find 2
+	expect
+		a query count
+		b 1
+	output expect equal
+	
+assert
+	query
+		list
+			item 1
+			next
+				item 2
+				next
+					item 4
+		find 2
+	expect
+		a query count
+		b 1
+	output expect equal
+	
+assert
+	query
+		list
+			item 1
+			next
+				item 3
+				next
+					item 2
+		find 2
+	expect
+		a query count
+		b 1
+	output expect equal
+	
+assert
+	query
+		list
+			item 2
+			next
+				item 2
+				next
+					item 4
+		find 2
+	expect
+		a query count
+		b 2
+	output expect equal
+	
+assert
+	query
+		list
+			item 1
+			next
+				item 2
+				next
+					item 2
+		find 2
+	expect
+		a query count
+		b 2
+	output expect equal
+	
+assert
+	query
+		list
+			item 2
+			next
+				item 3
+				next
+					item 2
+		find 2
+	expect
+		a query count
+		b 2
+	output expect equal
+	
+assert
+	query
+		list
+			item 2
+			next
+				item 2
+				next
+					item 2
+		find 2
+	expect
+		a query count
+		b 3
+	output expect equal

@@ -1,0 +1,182 @@
+lastIndex
+	reversedQuery
+		find input find
+		list input list reverse
+	inverseIndex reversedQuery firstIndex
+	pair
+		a inverseIndex
+		b 0
+	reversedIndex
+		a input list length increment
+		b inverseIndex
+	selector
+		a reversedIndex subtract
+		b 0
+		on pair equal
+	output selector switch
+		
+assert
+	comparison
+		list
+			item 4
+		find 4
+	expect
+		a comparison lastIndex
+		b 1
+	output expect equal
+	
+assert
+	comparison
+		list
+			item 4
+		find 3
+	expect
+		a comparison lastIndex
+		b 0
+	output expect equal
+	
+assert
+	comparison
+		list
+			item 4
+			next
+				item 5
+		find 4
+	expect
+		a comparison lastIndex
+		b 1
+	output expect equal
+	
+assert
+	comparison
+		list
+			item 4
+			next
+				item 5
+		find 5
+	expect
+		a comparison lastIndex
+		b 2
+	output expect equal
+	
+assert
+	comparison
+		list
+			item 4
+			next
+				item 4
+		find 4
+	expect
+		a comparison lastIndex
+		b 2
+	output expect equal
+	
+assert
+	comparison
+		list
+			item 4
+			next
+				item 5
+		find 3
+	expect
+		a comparison lastIndex
+		b 0
+	output expect equal
+	
+assert
+	comparison
+		list
+			item 4
+			next
+				item 5
+				next
+					item 3
+		find 4
+	expect
+		a comparison lastIndex
+		b 1
+	output expect equal
+	
+assert
+	comparison
+		list
+			item 4
+			next
+				item 5
+				next
+					item 3
+		find 5
+	expect
+		a comparison lastIndex
+		b 2
+	output expect equal
+	
+assert
+	comparison
+		list
+			item 4
+			next
+				item 5
+				next
+					item 3
+		find 3
+	expect
+		a comparison lastIndex
+		b 3
+	output expect equal
+	
+assert
+	comparison
+		list
+			item 4
+			next
+				item 5
+				next
+					item 3
+		find 6
+	expect
+		a comparison lastIndex
+		b 0
+	output expect equal
+	
+assert
+	comparison
+		list
+			item 4
+			next
+				item 3
+				next
+					item 3
+		find 3
+	expect
+		a comparison lastIndex
+		b 3
+	output expect equal
+	
+assert
+	comparison
+		list
+			item 3
+			next
+				item 5
+				next
+					item 3
+		find 3
+	expect
+		a comparison lastIndex
+		b 3
+	output expect equal
+	
+assert
+	comparison
+		list
+			item 3
+			next
+				item 3
+				next
+					item 5
+		find 3
+	expect
+		a comparison lastIndex
+		b 2
+	output expect equal

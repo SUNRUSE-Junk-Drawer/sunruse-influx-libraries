@@ -1,0 +1,92 @@
+min
+	output input item
+
+min
+	pair
+		a input item
+		b input next min
+	output pair min
+		
+assert
+	list
+		item 6
+	expect
+		a list min
+		b 6
+	output expect equal
+
+assert
+	list
+		item 6
+		next
+			item 8
+	expect
+		a list min
+		b 6
+	output expect equal
+
+assert
+	list
+		item 8
+		next
+			item 6
+	expect
+		a list min
+		b 6
+	output expect equal
+
+assert
+	list
+		item 4
+		next
+			item 8
+			next
+				item 6
+				next
+					item 9
+	expect
+		a list min
+		b 4
+	output expect equal
+	
+assert
+	list
+		item 6
+		next
+			item 9
+			next
+				item 8
+				next
+					item 4
+	expect
+		a list min
+		b 4
+	output expect equal
+	
+assert
+	list
+		item 6
+		next
+			item 4
+			next
+				item 9
+				next
+					item 8
+	expect
+		a list min
+		b 4
+	output expect equal
+	
+assert
+	list
+		item 9
+		next
+			item 8
+			next
+				item 4
+				next
+					item 6
+	expect
+		a list min
+		b 4
+	output expect equal

@@ -1,0 +1,45 @@
+counterClockwise
+	output
+		a input b negate
+		b input a
+		
+assert
+	temp
+		a 3
+		b 5
+	expect
+		a -5
+		b temp counterClockwise a
+	output expect equal
+
+assert
+	temp
+		a 3
+		b 5
+	expect
+		a 3
+		b temp counterClockwise b
+	output expect equal
+
+clockwise
+	output
+		a input b
+		b input a negate
+		
+assert
+	temp
+		a 3
+		b 5
+	expect
+		a 5
+		b temp clockwise a
+	output expect equal
+
+assert
+	temp
+		a 3
+		b 5
+	expect
+		a -3
+		b temp clockwise b
+	output expect equal

@@ -1,0 +1,8 @@
+square
+	output input split multiply
+	
+assert
+	expect
+		a 9
+		b 3 square
+	output expect equal

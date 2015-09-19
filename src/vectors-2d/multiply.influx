@@ -1,0 +1,30 @@
+multiply
+	output
+		a input intersperse a multiply
+		b input intersperse b multiply
+		
+assert
+	temp
+		a
+			a 3
+			b 5
+		b
+			a 7
+			b 4
+	expect
+		a 21
+		b temp multiply a
+	output expect equal
+	
+assert
+	temp
+		a
+			a 3
+			b 5
+		b
+			a 7
+			b 4
+	expect
+		a 20
+		b temp multiply b
+	output expect equal	

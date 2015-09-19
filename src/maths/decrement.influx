@@ -1,0 +1,11 @@
+decrement
+	temp
+		a input
+		b 1
+	output temp subtract
+	
+assert
+	expect
+		a 5 decrement
+		b 4
+	output expect equal

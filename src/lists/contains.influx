@@ -1,0 +1,113 @@
+contains
+	pair
+		a input list item
+		b input find
+	output pair equal
+	
+contains
+	pair
+		a input list item
+		b input find
+	next
+		find input find
+		list input list next
+	combine
+		a pair equal
+		b next contains
+	output combine or
+	
+assert
+	comparison
+		list
+			item 4
+		find 5
+	output comparison contains not
+	
+assert
+	comparison
+		list
+			item 4
+		find 4
+	output comparison contains
+	
+assert
+	comparison
+		list
+			item 4
+			next
+				item 3
+		find 5
+	output comparison contains not
+	
+assert
+	comparison
+		list
+			item 4
+			next
+				item 3
+		find 4
+	output comparison contains
+
+assert
+	comparison
+		list
+			item 4
+			next
+				item 3
+		find 3
+	output comparison contains
+	
+assert
+	comparison
+		list
+			item 4
+			next
+				item 3
+				next
+					item 6
+		find 5
+	output comparison contains not
+	
+assert
+	comparison
+		list
+			item 4
+			next
+				item 3
+				next
+					item 6
+		find 4
+	output comparison contains
+	
+assert
+	comparison
+		list
+			item 4
+			next
+				item 3
+				next
+					item 6
+		find 3
+	output comparison contains
+	
+assert
+	comparison
+		list
+			item 4
+			next
+				item 3
+				next
+					item 6
+		find 6
+	output comparison contains
+	
+assert
+	comparison
+		list
+			item 4
+			next
+				item 4
+				next
+					item 6
+		find 4
+	output comparison contains

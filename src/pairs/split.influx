@@ -1,0 +1,16 @@
+split
+	output
+		a input
+		b input
+		
+assert
+	expect
+		a 3
+		b 3 split a
+	output expect equal	
+	
+assert
+	expect
+		a 3
+		b 3 split b
+	output expect equal	

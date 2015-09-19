@@ -1,0 +1,24 @@
+min
+	prefit
+		a input a
+		b input b
+		on input greater
+	output prefit switch
+	
+assert
+	pair
+		a 3
+		b 5
+	expect
+		a 3
+		b pair min
+	output expect equal
+		
+assert
+	pair
+		a 5
+		b 3
+	expect
+		a 3
+		b pair min
+	output expect equal

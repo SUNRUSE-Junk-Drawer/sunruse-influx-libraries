@@ -1,0 +1,67 @@
+removeLast
+	output
+		item input item
+		
+		# We have to do nothing with the last one to end the search for new items.
+		_unused input next
+		
+removeLast
+	output 
+		item input item
+		next input next removeLast
+
+assert
+	list
+		item 3
+		next
+			item 5
+	expect
+		a list removeLast item
+		b 3
+	output expect equal
+
+assert
+	list
+		item 3
+		next
+			item 5
+	expect
+		a list removeLast length
+		b 1
+	output expect equal
+
+assert
+	list
+		item 3
+		next
+			item 5
+			next
+				item 6
+	expect
+		a list removeLast item
+		b 3
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 5
+			next
+				item 6
+	expect
+		a list removeLast next item
+		b 5
+	output expect equal
+
+assert
+	list
+		item 3
+		next
+			item 5
+			next
+				item 6
+	expect
+		a list removeLast length
+		b 2
+	output expect equal

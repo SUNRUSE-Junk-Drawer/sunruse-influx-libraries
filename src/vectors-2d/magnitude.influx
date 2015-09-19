@@ -1,0 +1,11 @@
+magnitudeSquared
+	output input split multiply add
+	
+assert
+	temp
+		a 3
+		b 5
+	expect
+		a 34
+		b temp magnitudeSquared
+	output expect equal

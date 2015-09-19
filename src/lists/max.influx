@@ -1,0 +1,92 @@
+max
+	output input item
+
+max
+	pair
+		a input item
+		b input next max
+	output pair max
+		
+assert
+	list
+		item 6
+	expect
+		a list max
+		b 6
+	output expect equal
+
+assert
+	list
+		item 6
+		next
+			item 8
+	expect
+		a list max
+		b 8
+	output expect equal
+
+assert
+	list
+		item 8
+		next
+			item 6
+	expect
+		a list max
+		b 8
+	output expect equal
+
+assert
+	list
+		item 6
+		next
+			item 8
+			next
+				item 4
+				next
+					item 9
+	expect
+		a list max
+		b 9
+	output expect equal
+	
+assert
+	list
+		item 6
+		next
+			item 9
+			next
+				item 4
+				next
+					item 8
+	expect
+		a list max
+		b 9
+	output expect equal
+	
+assert
+	list
+		item 6
+		next
+			item 4
+			next
+				item 9
+				next
+					item 8
+	expect
+		a list max
+		b 9
+	output expect equal
+	
+assert
+	list
+		item 9
+		next
+			item 8
+			next
+				item 4
+				next
+					item 6
+	expect
+		a list max
+		b 9
+	output expect equal

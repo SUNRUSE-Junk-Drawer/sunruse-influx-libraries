@@ -1,0 +1,15 @@
+dot
+	output input multiply add
+	
+assert
+	temp
+		a
+			a 4
+			b 7
+		b
+			a 5
+			b 9
+	expect
+		a 83
+		b temp dot
+	output expect equal

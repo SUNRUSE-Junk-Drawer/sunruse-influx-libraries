@@ -1,0 +1,49 @@
+length
+	output 1
+	
+length
+	output input next length increment
+	
+assert
+	list
+		item 4
+	expect
+		a list length
+		b 1
+	output expect equal
+	
+assert
+	list
+		item 4
+		next
+			item 6
+	expect
+		a list length
+		b 2
+	output expect equal
+	
+assert
+	list
+		item 4
+		next
+			item 6
+			next
+				item 3
+	expect
+		a list length
+		b 3
+	output expect equal
+	
+assert
+	list
+		item 4
+		next
+			item 6
+			next
+				item 3
+				next
+					item 9
+	expect
+		a list length
+		b 4
+	output expect equal

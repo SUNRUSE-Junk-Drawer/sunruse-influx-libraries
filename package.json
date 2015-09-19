@@ -1,20 +1,22 @@
 {
   "name": "sunruse-influx-libraries",
   "version": "0.0.0",
-  "description": "This is a collection of libraries users of SUNRUSE.influx may find useful.  ",
+  "description": "This is a collection of libraries users of SUNRUSE.influx may find useful.",
   "main": "index.js",
   "dependencies": {
     "sunruse-influx-toolchain": "^1.0.2"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-concat": "^0.5.1",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-jasmine-nodejs": "^1.4.3",
     "sunruse-influx-platforms-javascript": "0.0.6"
   },
   "scripts": {},
   "files": [
-    "libraries",
+    "deploy",
     "index.js"
   ],
   "repository": {

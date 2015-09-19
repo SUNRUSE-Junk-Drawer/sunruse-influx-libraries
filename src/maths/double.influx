@@ -1,0 +1,14 @@
+double
+	output input split add
+	
+assert
+	expect
+		a 8 double
+		b 16
+	output expect equal
+	
+assert
+	expect
+		a 4.15 double
+		b 8.3
+	output expect equal
