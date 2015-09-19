@@ -154,10 +154,10 @@ Given:
 * list: A list to search.
 Returns the number of instances of "find" in "list" as an integer, comparing using the "equal" function.
 
-#### unique
+#### unique (unimplemented)
 Given a list, returns true when all of the items are unique, and false when at least one is different, comparing using the "equal" function.
 
-#### same
+#### same (unimplemented)
 Given a list, returns true when all of the items are the same, and false when at least one is different, comparing using the "equal" function.
 
 #### reverse
@@ -175,41 +175,47 @@ Given:
 * item: An item to prepend.
 Returns a list, containing "list" with "item" added to the start.
 
-#### removeFirst
+#### removeFirst (unimplemented)
 Given a list, returns the list sans the first item. 
 
-#### removeLast
+#### removeLast (unimplemented)
 Given a list, returns the list sans the last item.
 
-#### removeIndex
+#### removeIndex (unimplemented)
 Given:
 * list: A list to remove from.
 * index: The 1-based index to remove an item at.
 Returns a list, containing "list" without the item at "index".  If "index" is less than 1 or greater than the length of "list", no changes are made.
 
-#### sortAscending
+#### sortAscending (unimplemented)
 Given a list, returns the items sorted ascending, i.e. 1, 2, 3.  Uses the "greater" function to compare.
 
-#### sortDescending
+#### sortDescending (unimplemented)
 Given a list, returns the items sorted descending, i.e. 3, 2, 1.  Uses the "greater" function to compare.
 
-#### replace
+#### replace (unimplemented)
 Given:
 * list: A list to replace in.
 * replace: An item to replace.
 * with: An item to replace with.
 Returns "list", where every instance of the item specified by "replace" has been replaced with "with".  Uses the "equal" function to compare.
 
-#### replaceFirst
+#### replaceFirst (unimplemented)
 Given:
 * list: A list to replace in.
 * replace: An item to replace.
 * with: An item to replace with.
 Returns "list", where the first instance only of the item specified by "replace" has been replaced with "with".  Uses the "equal" function to compare.  If the item did not exist in the list, no changes are made.
 
-#### replaceLast
+#### replaceLast (unimplemented)
 Given:
 * list: A list to replace in.
 * replace: An item to replace.
 * with: An item to replace with.
 Returns "list", where the last instance only of the item specified by "replace" has been replaced with "with".  Uses the "equal" function to compare.  If the item did not exist in the list, no changes are made.
+
+#### first
+Given a list, returns the first item.
+
+#### last
+Given a list, returns the last item.
