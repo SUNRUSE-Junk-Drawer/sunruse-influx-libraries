@@ -1,0 +1,91 @@
+atIndex
+	next
+		index input index decrement
+		list input list next
+	pair
+		a 1
+		b input index
+	selector	
+		a next atIndex
+		b input list item
+		on pair equal
+	output selector switch
+	
+atIndex
+	output input list item
+
+assert
+	query
+		list
+			item 5
+		index 1
+	expect
+		a query atIndex
+		b 5
+	output expect equal
+	
+assert
+	query
+		list
+			item 5
+			next
+				item 9
+		index 1
+	expect
+		a query atIndex
+		b 5
+	output expect equal
+	
+assert
+	query
+		list
+			item 5
+			next
+				item 9
+		index 2
+	expect
+		a query atIndex
+		b 9
+	output expect equal
+	
+assert
+	query
+		list
+			item 5
+			next
+				item 9
+				next
+					item 4
+		index 1
+	expect
+		a query atIndex
+		b 5
+	output expect equal
+	
+assert
+	query
+		list
+			item 5
+			next
+				item 9
+				next
+					item 4
+		index 2
+	expect
+		a query atIndex
+		b 9
+	output expect equal
+	
+assert
+	query
+		list
+			item 5
+			next
+				item 9
+				next
+					item 4
+		index 3
+	expect
+		a query atIndex
+		b 4
+	output expect equal

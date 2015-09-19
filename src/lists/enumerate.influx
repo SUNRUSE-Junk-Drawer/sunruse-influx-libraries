@@ -1,0 +1,185 @@
+enumerate
+	output
+		item input item
+		index 1
+
+enumerate
+	next
+		list input next
+		index 2
+	output
+		item input item
+		index 1
+		next next enumerate
+
+enumerate
+	next
+		list input list next
+		index input index increment
+	output 
+		item input list item
+		index input index
+		next next enumerate
+
+enumerate
+	output
+		item input list item
+		index input index
+
+assert
+	list
+		item 3
+	expect
+		a list enumerate length
+		b 1
+	output expect equal
+	
+assert
+	list
+		item 3
+	expect
+		a list enumerate item
+		b 3
+	output expect equal
+	
+assert
+	list
+		item 3
+	expect
+		a list enumerate index
+		b 1
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 7
+	expect
+		a list enumerate length
+		b 2
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 7
+	expect
+		a list enumerate item
+		b 3
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 7
+	expect
+		a list enumerate index
+		b 1
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 7
+	expect
+		a list enumerate next item
+		b 7
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 7
+	expect
+		a list enumerate next index
+		b 2
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 7
+			next
+				item 8
+	expect
+		a list enumerate length
+		b 3
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 7
+			next
+				item 8
+	expect
+		a list enumerate item
+		b 3
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 7
+			next
+				item 8
+	expect
+		a list enumerate index
+		b 1
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 7
+			next
+				item 8
+	expect
+		a list enumerate next item
+		b 7
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 7
+			next
+				item 8
+	expect
+		a list enumerate next index
+		b 2
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 7
+			next
+				item 8
+	expect
+		a list enumerate next next item
+		b 8
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 7
+			next
+				item 8
+	expect
+		a list enumerate next next index
+		b 3
+	output expect equal

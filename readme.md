@@ -157,7 +157,7 @@ Returns the number of instances of "find" in "list" as an integer, comparing usi
 #### unique
 Given a list, returns true when all of the items are unique, and false when at least one is present twice, comparing using the "equal" function.
 
-#### same (unimplemented)
+#### same
 Given a list, returns true when all of the items are the same, and false when at least one is different, comparing using the "equal" function.
 
 #### reverse
@@ -175,17 +175,26 @@ Given:
 * item: An item to prepend.
 Returns a list, containing "list" with "item" added to the start.
 
-#### removeFirst (unimplemented)
+#### removeFirst
 Given a list, returns the list sans the first item. 
 
-#### removeLast (unimplemented)
+#### removeLast
 Given a list, returns the list sans the last item.
+
+#### enumerate
+Given a list, returns the same list, but with an additional "index" property in each part, next to "item".  This is 1 in the first and increments with each item.
+
+#### atIndex
+Given:
+* list: A list to retrieve an item from.
+* index: The 1-based index to get the item at.
+Returns the item in the list at the index specified.
 
 #### removeIndex (unimplemented)
 Given:
 * list: A list to remove from.
 * index: The 1-based index to remove an item at.
-Returns a list, containing "list" without the item at "index".  If "index" is less than 1 or greater than the length of "list", no changes are made.
+Returns a list, containing "list" without the item at "index".
 
 #### sortAscending (unimplemented)
 Given a list, returns the items sorted ascending, i.e. 1, 2, 3.  Uses the "greater" function to compare.
