@@ -1,0 +1,72 @@
+same
+	toCount
+		find input first
+		list input
+	pair
+		a input length
+		b toCount count
+	output pair equal
+		
+assert
+	list
+		item 5
+	output list same
+	
+assert
+	list
+		item 5
+		next
+			item 5
+	output list same
+	
+assert
+	list
+		item 5
+		next
+			item 6
+	output list same not
+	
+assert
+	list
+		item 5
+		next
+			item 5
+			next
+				item 5
+	output list same
+	
+assert
+	list
+		item 5
+		next
+			item 5
+			next
+				item 6
+	output list same not
+	
+assert
+	list
+		item 5
+		next
+			item 6
+			next
+				item 5
+	output list same not
+	
+assert
+	list
+		item 6
+		next
+			item 5
+			next
+				item 5
+	output list same not
+	
+assert
+	list
+		item 5
+		next
+			item 4
+			next
+				item 6
+	output list same not

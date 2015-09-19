@@ -154,8 +154,8 @@ Given:
 * list: A list to search.
 Returns the number of instances of "find" in "list" as an integer, comparing using the "equal" function.
 
-#### unique (unimplemented)
-Given a list, returns true when all of the items are unique, and false when at least one is different, comparing using the "equal" function.
+#### unique
+Given a list, returns true when all of the items are unique, and false when at least one is present twice, comparing using the "equal" function.
 
 #### same (unimplemented)
 Given a list, returns true when all of the items are the same, and false when at least one is different, comparing using the "equal" function.
