@@ -13,17 +13,36 @@ module.exports.selfTest = function(platform) {
 			allLibraries[filename] = fs.readFileSync(module.exports(filename), "utf8");
 		}
 
-		var tokenized = toolchain.tokenizer(allLibraries);
+		var tokenized = undefined;
+		var exception = undefined;
+		
+		try {
+			tokenized = toolchain.tokenizer(allLibraries);
+		} catch(ex) {
+			console.log("got exception");
+			exception = ex;
+		}
 		
 		it("tokenizes", function(){
+			expect(exception).toBeUndefined();
 			expect(tokenized).toBeTruthy();
 		});
 			
 		platform.functions = tokenized;
 			
-		var assertions = toolchain.runAssertions(platform);
+		var assertions = undefined;
+		
+		try {
+			assertions = toolchain.runAssertions(platform);
+		} catch(ex) {
+			exception = ex;
+		}
 			
 		describe("assertions", function(){
+			it("runs assertions", function(){
+				expect(exception).toBeUndefined();
+				expect(assertions).toBeTruthy();
+			});
 			for(var i = 0; i < module.exports.list.length; i++) {
 				(function(i){
 					var filename = module.exports.list[i];
