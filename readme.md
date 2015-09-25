@@ -190,7 +190,7 @@ Given:
 * index: The 1-based index to get the item at.
 Returns the item in the list at the index specified.
 
-#### removeIndex (unimplemented)
+#### removeIndex
 Given:
 * list: A list to remove from.
 * index: The 1-based index to remove an item at.
@@ -228,3 +228,6 @@ Given a list, returns the first item.
 
 #### last
 Given a list, returns the last item.
+
+#### concatenate
+Given a pair of lists, returns a single list containing all the items in "a", then all the items in "b".

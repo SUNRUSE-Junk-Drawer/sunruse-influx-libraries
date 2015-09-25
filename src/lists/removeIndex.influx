@@ -1,0 +1,185 @@
+removeIndex
+	pair
+		a input index
+		b 1
+	selector
+		a input list item
+		b input list next item
+		on pair lessEqual
+	next
+		list input list removeFirst
+		index input index decrement
+	output
+		item selector switch
+		next next removeIndex
+		
+removeIndex
+	pair
+		a input index
+		b 1
+	selector
+		a input list item
+		b input list next item
+		on pair lessEqual
+	output
+		item selector switch
+
+assert
+	query
+		list
+			item 5
+			next 
+				item 3
+		index 1
+	expect
+		a query removeIndex length
+		b 1
+	output expect equal
+	
+assert
+	query
+		list
+			item 5
+			next 
+				item 3
+		index 1
+	expect
+		a query removeIndex item
+		b 3
+	output expect equal
+	
+assert
+	query
+		list
+			item 5
+			next 
+				item 3
+		index 2
+	expect
+		a query removeIndex length
+		b 1
+	output expect equal
+	
+assert
+	query
+		list
+			item 5
+			next 
+				item 3
+		index 2
+	expect
+		a query removeIndex item
+		b 5
+	output expect equal
+	
+assert
+	query
+		list
+			item 5
+			next 
+				item 3
+				next
+					item 8
+		index 1
+	expect
+		a query removeIndex item
+		b 3
+	output expect equal
+	
+assert
+	query
+		list
+			item 5
+			next 
+				item 3
+				next
+					item 8
+		index 1
+	expect
+		a query removeIndex next item
+		b 8
+	output expect equal
+	
+assert
+	query
+		list
+			item 5
+			next 
+				item 3
+				next
+					item 8
+		index 2
+	expect
+		a query removeIndex length
+		b 2
+	output expect equal
+	
+assert
+	query
+		list
+			item 5
+			next 
+				item 3
+				next
+					item 8
+		index 2
+	expect
+		a query removeIndex item
+		b 5
+	output expect equal
+	
+assert
+	query
+		list
+			item 5
+			next 
+				item 3
+				next
+					item 8
+		index 2
+	expect
+		a query removeIndex next item
+		b 8
+	output expect equal
+	
+assert
+	query
+		list
+			item 5
+			next 
+				item 3
+				next
+					item 8
+		index 3
+	expect
+		a query removeIndex length
+		b 2
+	output expect equal
+	
+assert
+	query
+		list
+			item 5
+			next 
+				item 3
+				next
+					item 8
+		index 3
+	expect
+		a query removeIndex item
+		b 5
+	output expect equal
+	
+assert
+	query
+		list
+			item 5
+			next 
+				item 3
+				next
+					item 8
+		index 3
+	expect
+		a query removeIndex next item
+		b 3
+	output expect equal

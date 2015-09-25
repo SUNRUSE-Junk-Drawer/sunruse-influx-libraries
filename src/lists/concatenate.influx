@@ -1,0 +1,367 @@
+concatenate
+	appender
+		list input a
+		item input b first
+	output appender append
+
+concatenate
+	appender
+		list input a
+		item input b first
+	next
+		a appender append
+		b input b removeFirst
+	output next concatenate
+
+assert
+	pair
+		a
+			item 3
+		b
+			item 7
+	expect
+		a pair concatenate length
+		b 2
+	output expect equal
+	
+assert
+	pair
+		a
+			item 3
+		b
+			item 7
+	expect
+		a pair concatenate item
+		b 3
+	output expect equal
+	
+assert
+	pair
+		a
+			item 3
+		b
+			item 7
+	expect
+		a pair concatenate next item
+		b 7
+	output expect equal
+	
+	
+assert
+	pair
+		a
+			item 3
+			next
+				item 6
+				next
+					item 9
+		b
+			item 7
+	expect
+		a pair concatenate length
+		b 4
+	output expect equal
+	
+assert
+	pair
+		a
+			item 3
+			next
+				item 6
+				next
+					item 9
+		b
+			item 7
+	expect
+		a pair concatenate item
+		b 3
+	output expect equal
+	
+assert
+	pair
+		a
+			item 3
+			next
+				item 6
+				next
+					item 9
+		b
+			item 7
+	expect
+		a pair concatenate next item
+		b 6
+	output expect equal
+	
+assert
+	pair
+		a
+			item 3
+			next
+				item 6
+				next
+					item 9
+		b
+			item 7
+	expect
+		a pair concatenate next next item
+		b 9
+	output expect equal
+	
+assert
+	pair
+		a
+			item 3
+			next
+				item 6
+				next
+					item 9
+		b
+			item 7
+	expect
+		a pair concatenate next next next item
+		b 7
+	output expect equal
+	
+	
+assert
+	pair
+		a
+			item 3
+		b
+			item 7
+			next
+				item 6
+				next
+					item 9
+	expect
+		a pair concatenate length
+		b 4
+	output expect equal
+	
+assert
+	pair
+		a
+			item 3
+		b
+			item 7
+			next
+				item 6
+				next
+					item 9
+	expect
+		a pair concatenate item
+		b 3
+	output expect equal
+	
+assert
+	pair
+		a
+			item 3
+		b
+			item 7
+			next
+				item 6
+				next
+					item 9
+	expect
+		a pair concatenate next item
+		b 7
+	output expect equal
+	
+assert
+	pair
+		a
+			item 3
+		b
+			item 7
+			next
+				item 6
+				next
+					item 9
+	expect
+		a pair concatenate next next item
+		b 6
+	output expect equal
+	
+assert
+	pair
+		a
+			item 3
+		b
+			item 7
+			next
+				item 6
+				next
+					item 9
+	expect
+		a pair concatenate next next next item
+		b 9
+	output expect equal
+	
+assert
+	pair
+		a
+			item 3
+			next
+				item 10
+				next
+					item 2
+					next
+						item 14
+		b
+			item 7
+			next
+				item 6
+				next
+					item 9
+	expect
+		a pair concatenate length
+		b 7
+	output expect equal
+	
+assert
+	pair
+		a
+			item 3
+			next
+				item 10
+				next
+					item 2
+					next
+						item 14
+		b
+			item 7
+			next
+				item 6
+				next
+					item 9
+	expect
+		a pair concatenate item
+		b 3
+	output expect equal
+	
+assert
+	pair
+		a
+			item 3
+			next
+				item 10
+				next
+					item 2
+					next
+						item 14
+		b
+			item 7
+			next
+				item 6
+				next
+					item 9
+	expect
+		a pair concatenate next item
+		b 10
+	output expect equal
+	
+assert
+	pair
+		a
+			item 3
+			next
+				item 10
+				next
+					item 2
+					next
+						item 14
+		b
+			item 7
+			next
+				item 6
+				next
+					item 9
+	expect
+		a pair concatenate next next item
+		b 2
+	output expect equal
+	
+assert
+	pair
+		a
+			item 3
+			next
+				item 10
+				next
+					item 2
+					next
+						item 14
+		b
+			item 7
+			next
+				item 6
+				next
+					item 9
+	expect
+		a pair concatenate next next next item
+		b 14
+	output expect equal
+	
+assert
+	pair
+		a
+			item 3
+			next
+				item 10
+				next
+					item 2
+					next
+						item 14
+		b
+			item 7
+			next
+				item 6
+				next
+					item 9
+	expect
+		a pair concatenate next next next next item
+		b 7
+	output expect equal
+	
+assert
+	pair
+		a
+			item 3
+			next
+				item 10
+				next
+					item 2
+					next
+						item 14
+		b
+			item 7
+			next
+				item 6
+				next
+					item 9
+	expect
+		a pair concatenate next next next next next item
+		b 6
+	output expect equal
+	
+assert
+	pair
+		a
+			item 3
+			next
+				item 10
+				next
+					item 2
+					next
+						item 14
+		b
+			item 7
+			next
+				item 6
+				next
+					item 9
+	expect
+		a pair concatenate next next next next next next item
+		b 9
+	output expect equal
