@@ -9,6 +9,16 @@ assert
 			item 3
 		item 4
 	expect
+		a query prepend length
+		b 2
+	output expect equal
+
+assert
+	query
+		list
+			item 3
+		item 4
+	expect
 		a query prepend item
 		b 4
 	output expect equal
@@ -20,6 +30,18 @@ assert
 		item 4
 	expect
 		a query prepend next item
+		b 3
+	output expect equal
+	
+assert
+	query
+		list
+			item 3
+			next
+				item 5
+		item 4
+	expect
+		a query prepend length
 		b 3
 	output expect equal
 	

@@ -10,6 +10,16 @@ assert
 			item 3
 		item 4
 	expect
+		a query append length
+		b 2
+	output expect equal
+
+assert
+	query
+		list
+			item 3
+		item 4
+	expect
 		a query append item
 		b 3
 	output expect equal
@@ -22,6 +32,18 @@ assert
 	expect
 		a query append next item
 		b 4
+	output expect equal
+
+assert
+	query
+		list
+			item 3
+			next
+				item 5
+		item 4
+	expect
+		a query append length
+		b 3
 	output expect equal
 	
 assert

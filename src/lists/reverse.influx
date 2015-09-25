@@ -11,8 +11,26 @@ assert
 	list
 		item 3
 	expect
+		a list reverse length
+		b 1
+	output expect equal
+
+assert
+	list
+		item 3
+	expect
 		a list reverse item
 		b 3
+	output expect equal
+
+assert
+	list
+		item 3
+		next
+			item 5
+	expect
+		a list reverse length
+		b 2
 	output expect equal
 	
 assert
@@ -32,5 +50,54 @@ assert
 			item 5
 	expect
 		a list reverse next item
+		b 3
+	output expect equal
+	
+	
+assert
+	list
+		item 3
+		next
+			item 5
+			next
+				item 8
+	expect
+		a list reverse length
+		b 3
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 5
+			next
+				item 8
+	expect
+		a list reverse item
+		b 8
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 5
+			next
+				item 8
+	expect
+		a list reverse next item
+		b 5
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 5
+			next
+				item 8
+	expect
+		a list reverse next next item
 		b 3
 	output expect equal
