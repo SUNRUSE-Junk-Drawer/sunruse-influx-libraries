@@ -231,3 +231,39 @@ Given a list, returns the last item.
 
 #### concatenate
 Given a pair of lists, returns a single list containing all the items in "a", then all the items in "b".
+
+#### map (unimplemented)
+Given:
+* list: A list to map.
+* data: Arbitrary data to include when mapping items.
+Calls the "map" function for each item in "list", with the following as input:
+* item: The item to map.
+* data: "data" from the input.
+And returns the result of each "map" call in a list in order.
+
+#### count (unimplemented)
+Given:
+* list: A list to count.
+* data: Arbitrary data to include when mapping items.
+Calls the "predicate" function for each item in "list", with the following as input:
+* item: The item to map.
+* data: "data" from the input.
+And returns the number of "predicate" calls which returned true, as an integer.
+
+#### sortAscending (unimplemented)
+Given:
+* list: A list to sort.
+* data: Arbitrary data to include when mapping items.
+Calls the "index" function for each item in "list", with the following as input:
+* item: The item to map.
+* data: "data" from the input.
+And returns the input list, sorted by the result of "index", ascending.
+
+#### sortDescending (unimplemented)
+Given:
+* list: A list to sort.
+* data: Arbitrary data to include when mapping items.
+Calls the "index" function for each item in "list", with the following as input:
+* item: The item to map.
+* data: "data" from the input.
+And returns the input list, sorted by the result of "index", descending.
