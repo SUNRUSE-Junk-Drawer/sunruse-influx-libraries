@@ -232,7 +232,7 @@ Given a list, returns the last item.
 #### concatenate
 Given a pair of lists, returns a single list containing all the items in "a", then all the items in "b".
 
-#### map (unimplemented)
+#### map
 Given:
 * list: A list to map.
 * data: Arbitrary data to include when mapping items.
