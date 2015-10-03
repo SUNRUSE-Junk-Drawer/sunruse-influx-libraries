@@ -1,5 +1,5 @@
 max
-	output input item
+	output input lastItem
 
 max
 	pair
@@ -9,7 +9,7 @@ max
 		
 assert
 	list
-		item 6
+		lastItem 6
 	expect
 		a list max
 		b 6
@@ -19,7 +19,7 @@ assert
 	list
 		item 6
 		next
-			item 8
+			lastItem 8
 	expect
 		a list max
 		b 8
@@ -29,7 +29,7 @@ assert
 	list
 		item 8
 		next
-			item 6
+			lastItem 6
 	expect
 		a list max
 		b 8
@@ -43,7 +43,7 @@ assert
 			next
 				item 4
 				next
-					item 9
+					lastItem 9
 	expect
 		a list max
 		b 9
@@ -57,7 +57,7 @@ assert
 			next
 				item 4
 				next
-					item 8
+					lastItem 8
 	expect
 		a list max
 		b 9
@@ -71,7 +71,7 @@ assert
 			next
 				item 9
 				next
-					item 8
+					lastItem 8
 	expect
 		a list max
 		b 9
@@ -85,7 +85,7 @@ assert
 			next
 				item 4
 				next
-					item 6
+					lastItem 6
 	expect
 		a list max
 		b 9

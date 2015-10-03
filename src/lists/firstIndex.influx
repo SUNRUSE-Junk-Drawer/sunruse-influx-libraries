@@ -1,59 +1,38 @@
-# First item in multi-item list.
 firstIndex
-	pair
-		a input list item
-		b input find
-	next
-		list input list removeFirst
+	temp
+		list input list
 		find input find
-		index 2
+		index 1
+	output temp _firstIndex
+	
+_firstIndex
+	pair
+		a input list lastItem
+		b input find
 	selector
-		a next firstIndex
-		b 1
+		a 0
+		b input index
 		on pair equal
 	output selector switch
 		
-# Middle item in multi-item list.
-firstIndex
+_firstIndex
 	pair
-		a input list item
+		a input list first
 		b input find
 	next
 		list input list removeFirst
 		find input find
 		index input index increment
 	selector
-		a next firstIndex
+		a next _firstIndex
 		b input index
-		on pair equal
-	output selector switch
-		
-# End item in multi-item list.
-firstIndex
-	pair
-		a input list item
-		b input find
-	selector
-		a 0
-		b input index
-		on pair equal
-	output selector switch
-
-# Only item in single-item list.
-firstIndex
-	pair
-		a input list item
-		b input find
-	selector
-		a 0
-		b 1
 		on pair equal
 	output selector switch
 	
 assert
 	comparison
 		list
-			item 4
+			lastItem 4
 		find 4
 	expect
 		a comparison firstIndex
@@ -63,7 +42,7 @@ assert
 assert
 	comparison
 		list
-			item 4
+			lastItem 4
 		find 3
 	expect
 		a comparison firstIndex
@@ -75,7 +54,7 @@ assert
 		list
 			item 4
 			next
-				item 5
+				lastItem 5
 		find 4
 	expect
 		a comparison firstIndex
@@ -87,7 +66,7 @@ assert
 		list
 			item 4
 			next
-				item 5
+				lastItem 5
 		find 5
 	expect
 		a comparison firstIndex
@@ -99,7 +78,7 @@ assert
 		list
 			item 4
 			next
-				item 4
+				lastItem 4
 		find 4
 	expect
 		a comparison firstIndex
@@ -111,7 +90,7 @@ assert
 		list
 			item 4
 			next
-				item 5
+				lastItem 5
 		find 3
 	expect
 		a comparison firstIndex
@@ -125,7 +104,7 @@ assert
 			next
 				item 5
 				next
-					item 3
+					lastItem 3
 		find 4
 	expect
 		a comparison firstIndex
@@ -139,7 +118,7 @@ assert
 			next
 				item 5
 				next
-					item 3
+					lastItem 3
 		find 5
 	expect
 		a comparison firstIndex
@@ -153,7 +132,7 @@ assert
 			next
 				item 5
 				next
-					item 3
+					lastItem 3
 		find 3
 	expect
 		a comparison firstIndex
@@ -167,7 +146,7 @@ assert
 			next
 				item 5
 				next
-					item 3
+					lastItem 3
 		find 6
 	expect
 		a comparison firstIndex
@@ -181,7 +160,7 @@ assert
 			next
 				item 3
 				next
-					item 3
+					lastItem 3
 		find 3
 	expect
 		a comparison firstIndex
@@ -195,7 +174,7 @@ assert
 			next
 				item 5
 				next
-					item 3
+					lastItem 3
 		find 3
 	expect
 		a comparison firstIndex
@@ -209,7 +188,7 @@ assert
 			next
 				item 3
 				next
-					item 5
+					lastItem 5
 		find 3
 	expect
 		a comparison firstIndex

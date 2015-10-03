@@ -16,9 +16,9 @@ concatenate
 assert
 	pair
 		a
-			item 3
+			lastItem 3
 		b
-			item 7
+			lastItem 7
 	expect
 		a pair concatenate length
 		b 2
@@ -27,9 +27,9 @@ assert
 assert
 	pair
 		a
-			item 3
+			lastItem 3
 		b
-			item 7
+			lastItem 7
 	expect
 		a pair concatenate item
 		b 3
@@ -38,11 +38,11 @@ assert
 assert
 	pair
 		a
-			item 3
+			lastItem 3
 		b
-			item 7
+			lastItem 7
 	expect
-		a pair concatenate next item
+		a pair concatenate next lastItem
 		b 7
 	output expect equal
 	
@@ -54,9 +54,9 @@ assert
 			next
 				item 6
 				next
-					item 9
+					lastItem 9
 		b
-			item 7
+			lastItem 7
 	expect
 		a pair concatenate length
 		b 4
@@ -69,9 +69,9 @@ assert
 			next
 				item 6
 				next
-					item 9
+					lastItem 9
 		b
-			item 7
+			lastItem 7
 	expect
 		a pair concatenate item
 		b 3
@@ -84,9 +84,9 @@ assert
 			next
 				item 6
 				next
-					item 9
+					lastItem 9
 		b
-			item 7
+			lastItem 7
 	expect
 		a pair concatenate next item
 		b 6
@@ -99,9 +99,9 @@ assert
 			next
 				item 6
 				next
-					item 9
+					lastItem 9
 		b
-			item 7
+			lastItem 7
 	expect
 		a pair concatenate next next item
 		b 9
@@ -114,11 +114,11 @@ assert
 			next
 				item 6
 				next
-					item 9
+					lastItem 9
 		b
-			item 7
+			lastItem 7
 	expect
-		a pair concatenate next next next item
+		a pair concatenate next next next lastItem
 		b 7
 	output expect equal
 	
@@ -126,13 +126,13 @@ assert
 assert
 	pair
 		a
-			item 3
+			lastItem 3
 		b
 			item 7
 			next
 				item 6
 				next
-					item 9
+					lastItem 9
 	expect
 		a pair concatenate length
 		b 4
@@ -141,13 +141,13 @@ assert
 assert
 	pair
 		a
-			item 3
+			lastItem 3
 		b
 			item 7
 			next
 				item 6
 				next
-					item 9
+					lastItem 9
 	expect
 		a pair concatenate item
 		b 3
@@ -156,13 +156,13 @@ assert
 assert
 	pair
 		a
-			item 3
+			lastItem 3
 		b
 			item 7
 			next
 				item 6
 				next
-					item 9
+					lastItem 9
 	expect
 		a pair concatenate next item
 		b 7
@@ -171,13 +171,13 @@ assert
 assert
 	pair
 		a
-			item 3
+			lastItem 3
 		b
 			item 7
 			next
 				item 6
 				next
-					item 9
+					lastItem 9
 	expect
 		a pair concatenate next next item
 		b 6
@@ -186,15 +186,15 @@ assert
 assert
 	pair
 		a
-			item 3
+			lastItem 3
 		b
 			item 7
 			next
 				item 6
 				next
-					item 9
+					lastItem 9
 	expect
-		a pair concatenate next next next item
+		a pair concatenate next next next lastItem
 		b 9
 	output expect equal
 	
@@ -207,13 +207,13 @@ assert
 				next
 					item 2
 					next
-						item 14
+						lastItem 14
 		b
 			item 7
 			next
 				item 6
 				next
-					item 9
+					lastItem 9
 	expect
 		a pair concatenate length
 		b 7
@@ -228,13 +228,13 @@ assert
 				next
 					item 2
 					next
-						item 14
+						lastItem 14
 		b
 			item 7
 			next
 				item 6
 				next
-					item 9
+					lastItem 9
 	expect
 		a pair concatenate item
 		b 3
@@ -249,13 +249,13 @@ assert
 				next
 					item 2
 					next
-						item 14
+						lastItem 14
 		b
 			item 7
 			next
 				item 6
 				next
-					item 9
+					lastItem 9
 	expect
 		a pair concatenate next item
 		b 10
@@ -270,13 +270,13 @@ assert
 				next
 					item 2
 					next
-						item 14
+						lastItem 14
 		b
 			item 7
 			next
 				item 6
 				next
-					item 9
+					lastItem 9
 	expect
 		a pair concatenate next next item
 		b 2
@@ -291,13 +291,13 @@ assert
 				next
 					item 2
 					next
-						item 14
+						lastItem 14
 		b
 			item 7
 			next
 				item 6
 				next
-					item 9
+					lastItem 9
 	expect
 		a pair concatenate next next next item
 		b 14
@@ -312,13 +312,13 @@ assert
 				next
 					item 2
 					next
-						item 14
+						lastItem 14
 		b
 			item 7
 			next
 				item 6
 				next
-					item 9
+					lastItem 9
 	expect
 		a pair concatenate next next next next item
 		b 7
@@ -333,13 +333,13 @@ assert
 				next
 					item 2
 					next
-						item 14
+						lastItem 14
 		b
 			item 7
 			next
 				item 6
 				next
-					item 9
+					lastItem 9
 	expect
 		a pair concatenate next next next next next item
 		b 6
@@ -354,14 +354,14 @@ assert
 				next
 					item 2
 					next
-						item 14
+						lastItem 14
 		b
 			item 7
 			next
 				item 6
 				next
-					item 9
+					lastItem 9
 	expect
-		a pair concatenate next next next next next next item
+		a pair concatenate next next next next next next lastItem
 		b 9
 	output expect equal

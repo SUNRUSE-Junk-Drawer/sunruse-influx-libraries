@@ -1,6 +1,6 @@
 contains
 	pair
-		a input list item
+		a input list lastItem
 		b input find
 	output pair equal
 	
@@ -19,14 +19,14 @@ contains
 assert
 	comparison
 		list
-			item 4
+			lastItem 4
 		find 5
 	output comparison contains not
 	
 assert
 	comparison
 		list
-			item 4
+			lastItem 4
 		find 4
 	output comparison contains
 	
@@ -35,7 +35,7 @@ assert
 		list
 			item 4
 			next
-				item 3
+				lastItem 3
 		find 5
 	output comparison contains not
 	
@@ -44,7 +44,7 @@ assert
 		list
 			item 4
 			next
-				item 3
+				lastItem 3
 		find 4
 	output comparison contains
 
@@ -53,7 +53,7 @@ assert
 		list
 			item 4
 			next
-				item 3
+				lastItem 3
 		find 3
 	output comparison contains
 	
@@ -64,7 +64,7 @@ assert
 			next
 				item 3
 				next
-					item 6
+					lastItem 6
 		find 5
 	output comparison contains not
 	
@@ -75,7 +75,7 @@ assert
 			next
 				item 3
 				next
-					item 6
+					lastItem 6
 		find 4
 	output comparison contains
 	
@@ -86,7 +86,7 @@ assert
 			next
 				item 3
 				next
-					item 6
+					lastItem 6
 		find 3
 	output comparison contains
 	
@@ -97,7 +97,7 @@ assert
 			next
 				item 3
 				next
-					item 6
+					lastItem 6
 		find 6
 	output comparison contains
 	
@@ -108,6 +108,6 @@ assert
 			next
 				item 4
 				next
-					item 6
+					lastItem 6
 		find 4
 	output comparison contains

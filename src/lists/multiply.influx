@@ -1,5 +1,5 @@
 multiply
-	output input item
+	output input lastItem
 
 multiply
 	pair
@@ -9,7 +9,7 @@ multiply
 	
 assert
 	list
-		item 4
+		lastItem 4
 	expect
 		a list multiply
 		b 4
@@ -19,7 +19,7 @@ assert
 	list
 		item 4
 		next
-			item 6
+			lastItem 6
 	expect
 		a list multiply
 		b 24
@@ -31,7 +31,7 @@ assert
 		next
 			item 6
 			next
-				item 3
+				lastItem 3
 	expect
 		a list multiply
 		b 72
@@ -45,7 +45,7 @@ assert
 			next
 				item 3
 				next
-					item 9
+					lastItem 9
 	expect
 		a list multiply
 		b 648

@@ -105,7 +105,7 @@ Operations on linked lists, of the form:
 	next
 		item 7
 		next
-			item 3
+			lastItem 3
 			
 Indexes are 1-based; 0 is used as a "not-in-list" index.
 
@@ -250,7 +250,7 @@ Calls the "predicate" function for each item in "list", with the following as in
 * data: "data" from the input.
 And returns the number of "predicate" calls which returned true, as an integer.
 
-#### sortAscending (unimplemented)
+#### sortAscending
 Given:
 * list: A list to sort.
 * data: Arbitrary data to include when mapping items.
@@ -259,7 +259,7 @@ Calls the "index" function for each item in "list", with the following as input:
 * data: "data" from the input.
 And returns the input list, sorted by the result of "index", ascending.
 
-#### sortDescending (unimplemented)
+#### sortDescending
 Given:
 * list: A list to sort.
 * data: Arbitrary data to include when mapping items.

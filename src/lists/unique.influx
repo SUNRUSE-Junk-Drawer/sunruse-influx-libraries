@@ -1,5 +1,6 @@
 unique
-	output true
+	# This is necessary to remove any ambiguity.
+	output input lastItem split equal
 	
 unique
 	next
@@ -12,7 +13,21 @@ unique
 
 assert
 	list
+		lastItem 5
+	output list unique
+	
+assert
+	list
 		item 5
+		next
+			lastItem 5
+	output list unique not
+	
+assert
+	list
+		item 5
+		next
+			lastItem 6
 	output list unique
 	
 assert
@@ -20,22 +35,8 @@ assert
 		item 5
 		next
 			item 5
-	output list unique not
-	
-assert
-	list
-		item 5
-		next
-			item 6
-	output list unique
-	
-assert
-	list
-		item 5
-		next
-			item 5
 			next
-				item 5
+				lastItem 5
 	output list unique not
 	
 assert
@@ -44,7 +45,7 @@ assert
 		next
 			item 5
 			next
-				item 6
+				lastItem 6
 	output list unique not
 	
 assert
@@ -53,7 +54,7 @@ assert
 		next
 			item 6
 			next
-				item 5
+				lastItem 5
 	output list unique not
 	
 assert
@@ -62,7 +63,7 @@ assert
 		next
 			item 5
 			next
-				item 5
+				lastItem 5
 	output list unique not
 	
 assert
@@ -71,5 +72,5 @@ assert
 		next
 			item 4
 			next
-				item 6
+				lastItem 6
 	output list unique

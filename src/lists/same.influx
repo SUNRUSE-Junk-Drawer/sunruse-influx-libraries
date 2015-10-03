@@ -9,21 +9,21 @@ same
 		
 assert
 	list
-		item 5
+		lastItem 5
 	output list same
 	
 assert
 	list
 		item 5
 		next
-			item 5
+			lastItem 5
 	output list same
 	
 assert
 	list
 		item 5
 		next
-			item 6
+			lastItem 6
 	output list same not
 	
 assert
@@ -32,7 +32,7 @@ assert
 		next
 			item 5
 			next
-				item 5
+				lastItem 5
 	output list same
 	
 assert
@@ -41,7 +41,7 @@ assert
 		next
 			item 5
 			next
-				item 6
+				lastItem 6
 	output list same not
 	
 assert
@@ -50,7 +50,7 @@ assert
 		next
 			item 6
 			next
-				item 5
+				lastItem 5
 	output list same not
 	
 assert
@@ -59,7 +59,7 @@ assert
 		next
 			item 5
 			next
-				item 5
+				lastItem 5
 	output list same not
 	
 assert
@@ -68,5 +68,5 @@ assert
 		next
 			item 4
 			next
-				item 6
+				lastItem 6
 	output list same not

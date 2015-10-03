@@ -1,0 +1,452 @@
+sortDescending
+	output input sortAscending reverse
+
+assert
+	list
+		lastItem 3
+	expect
+		a list sortDescending length
+		b 1
+	output expect equal
+	
+assert
+	list
+		lastItem 3
+	expect
+		a list sortDescending lastItem
+		b 3
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			lastItem 5
+	expect
+		a list sortDescending length
+		b 2
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			lastItem 5
+	expect
+		a list sortDescending item
+		b 5
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			lastItem 5
+	expect
+		a list sortDescending next lastItem
+		b 3
+	output expect equal
+	
+	
+assert
+	list
+		item 5
+		next
+			lastItem 3
+	expect
+		a list sortDescending length
+		b 2
+	output expect equal
+	
+assert
+	list
+		item 5
+		next
+			lastItem 3
+	expect
+		a list sortDescending item
+		b 5
+	output expect equal
+	
+assert
+	list
+		item 5
+		next
+			lastItem 3
+	expect
+		a list sortDescending next lastItem
+		b 3
+	output expect equal
+	
+	
+assert
+	list
+		item 3
+		next
+			lastItem 3
+	expect
+		a list sortDescending length
+		b 2
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			lastItem 3
+	expect
+		a list sortDescending item
+		b 3
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			lastItem 3
+	expect
+		a list sortDescending next lastItem
+		b 3
+	output expect equal
+	
+	
+assert
+	list
+		item 3
+		next
+			item 5
+			next
+				lastItem 7
+	expect
+		a list sortDescending length
+		b 3
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 5
+			next
+				lastItem 7
+	expect
+		a list sortDescending item
+		b 7
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 5
+			next
+				lastItem 7
+	expect
+		a list sortDescending next item
+		b 5
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 5
+			next
+				lastItem 7
+	expect
+		a list sortDescending next next lastItem
+		b 3
+	output expect equal
+	
+	
+assert
+	list
+		item 5
+		next
+			item 7
+			next
+				lastItem 3
+	expect
+		a list sortDescending length
+		b 3
+	output expect equal
+	
+assert
+	list
+		item 5
+		next
+			item 7
+			next
+				lastItem 3
+	expect
+		a list sortDescending item
+		b 7
+	output expect equal
+	
+assert
+	list
+		item 5
+		next
+			item 7
+			next
+				lastItem 3
+	expect
+		a list sortDescending next item
+		b 5
+	output expect equal
+	
+assert
+	list
+		item 5
+		next
+			item 7
+			next
+				lastItem 3
+	expect
+		a list sortDescending next next lastItem
+		b 3
+	output expect equal
+	
+	
+assert
+	list
+		item 7
+		next
+			item 5
+			next
+				lastItem 3
+	expect
+		a list sortDescending length
+		b 3
+	output expect equal
+	
+assert
+	list
+		item 7
+		next
+			item 5
+			next
+				lastItem 3
+	expect
+		a list sortDescending item
+		b 7
+	output expect equal
+	
+assert
+	list
+		item 7
+		next
+			item 5
+			next
+				lastItem 3
+	expect
+		a list sortDescending next item
+		b 5
+	output expect equal
+	
+assert
+	list
+		item 7
+		next
+			item 5
+			next
+				lastItem 3
+	expect
+		a list sortDescending next next lastItem
+		b 3
+	output expect equal
+	
+	
+assert
+	list
+		item 5
+		next
+			item 3
+			next
+				lastItem 7
+	expect
+		a list sortDescending length
+		b 3
+	output expect equal
+	
+assert
+	list
+		item 5
+		next
+			item 3
+			next
+				lastItem 7
+	expect
+		a list sortDescending item
+		b 7
+	output expect equal
+	
+assert
+	list
+		item 5
+		next
+			item 3
+			next
+				lastItem 7
+	expect
+		a list sortDescending next item
+		b 5
+	output expect equal
+	
+assert
+	list
+		item 5
+		next
+			item 3
+			next
+				lastItem 7
+	expect
+		a list sortDescending next next lastItem
+		b 3
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 5
+			next
+				lastItem 3
+	expect
+		a list sortDescending length
+		b 3
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 5
+			next
+				lastItem 3
+	expect
+		a list sortDescending item
+		b 5
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 5
+			next
+				lastItem 3
+	expect
+		a list sortDescending next item
+		b 3
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 5
+			next
+				lastItem 3
+	expect
+		a list sortDescending next next lastItem
+		b 3
+	output expect equal
+	
+
+assert
+	list
+		item 3
+		next
+			item 1
+			next
+				lastItem 3
+	expect
+		a list sortDescending length
+		b 3
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 1
+			next
+				lastItem 3
+	expect
+		a list sortDescending item
+		b 3
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 1
+			next
+				lastItem 3
+	expect
+		a list sortDescending next item
+		b 3
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 1
+			next
+				lastItem 3
+	expect
+		a list sortDescending next next lastItem
+		b 1
+	output expect equal
+	
+	
+assert
+	list
+		item 3
+		next
+			item 3
+			next
+				lastItem 3
+	expect
+		a list sortDescending length
+		b 3
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 3
+			next
+				lastItem 3
+	expect
+		a list sortDescending item
+		b 3
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 3
+			next
+				lastItem 3
+	expect
+		a list sortDescending next item
+		b 3
+	output expect equal
+	
+assert
+	list
+		item 3
+		next
+			item 3
+			next
+				lastItem 3
+	expect
+		a list sortDescending next next lastItem
+		b 3
+	output expect equal

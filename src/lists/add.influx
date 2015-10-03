@@ -1,5 +1,5 @@
 add
-	output input item
+	output input lastItem
 
 add
 	pair
@@ -9,7 +9,7 @@ add
 	
 assert
 	list
-		item 4
+		lastItem 4
 	expect
 		a list add
 		b 4
@@ -19,7 +19,7 @@ assert
 	list
 		item 4
 		next
-			item 6
+			lastItem 6
 	expect
 		a list add
 		b 10
@@ -31,7 +31,7 @@ assert
 		next
 			item 6
 			next
-				item 3
+				lastItem 3
 	expect
 		a list add
 		b 13
@@ -45,7 +45,7 @@ assert
 			next
 				item 3
 				next
-					item 9
+					lastItem 9
 	expect
 		a list add
 		b 22

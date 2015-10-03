@@ -1,34 +1,26 @@
 enumerate
+	temp
+		list input
+		counter 1
+	output temp _enumerate
+	
+_enumerate
 	output
-		item input item
-		index 1
+		lastItem input list lastItem
+		index input counter
 
-enumerate
-	next
-		list input next
-		index 2
-	output
-		item input item
-		index 1
-		next next enumerate
-
-enumerate
-	next
-		list input list next
-		index input index increment
-	output 
-		item input list item
-		index input index
-		next next enumerate
-
-enumerate
+_enumerate
+	temp
+		counter input counter increment
+		list input list removeFirst
 	output
 		item input list item
-		index input index
+		index input counter
+		next temp _enumerate
 
 assert
 	list
-		item 3
+		lastItem 3
 	expect
 		a list enumerate length
 		b 1
@@ -36,15 +28,15 @@ assert
 	
 assert
 	list
-		item 3
+		lastItem 3
 	expect
-		a list enumerate item
+		a list enumerate lastItem
 		b 3
 	output expect equal
 	
 assert
 	list
-		item 3
+		lastItem 3
 	expect
 		a list enumerate index
 		b 1
@@ -54,7 +46,7 @@ assert
 	list
 		item 3
 		next
-			item 7
+			lastItem 7
 	expect
 		a list enumerate length
 		b 2
@@ -64,7 +56,7 @@ assert
 	list
 		item 3
 		next
-			item 7
+			lastItem 7
 	expect
 		a list enumerate item
 		b 3
@@ -74,7 +66,7 @@ assert
 	list
 		item 3
 		next
-			item 7
+			lastItem 7
 	expect
 		a list enumerate index
 		b 1
@@ -84,9 +76,9 @@ assert
 	list
 		item 3
 		next
-			item 7
+			lastItem 7
 	expect
-		a list enumerate next item
+		a list enumerate next lastItem
 		b 7
 	output expect equal
 	
@@ -94,7 +86,7 @@ assert
 	list
 		item 3
 		next
-			item 7
+			lastItem 7
 	expect
 		a list enumerate next index
 		b 2
@@ -106,7 +98,7 @@ assert
 		next
 			item 7
 			next
-				item 8
+				lastItem 8
 	expect
 		a list enumerate length
 		b 3
@@ -118,7 +110,7 @@ assert
 		next
 			item 7
 			next
-				item 8
+				lastItem 8
 	expect
 		a list enumerate item
 		b 3
@@ -130,7 +122,7 @@ assert
 		next
 			item 7
 			next
-				item 8
+				lastItem 8
 	expect
 		a list enumerate index
 		b 1
@@ -142,7 +134,7 @@ assert
 		next
 			item 7
 			next
-				item 8
+				lastItem 8
 	expect
 		a list enumerate next item
 		b 7
@@ -154,7 +146,7 @@ assert
 		next
 			item 7
 			next
-				item 8
+				lastItem 8
 	expect
 		a list enumerate next index
 		b 2
@@ -166,9 +158,9 @@ assert
 		next
 			item 7
 			next
-				item 8
+				lastItem 8
 	expect
-		a list enumerate next next item
+		a list enumerate next next lastItem
 		b 8
 	output expect equal
 	
@@ -178,7 +170,7 @@ assert
 		next
 			item 7
 			next
-				item 8
+				lastItem 8
 	expect
 		a list enumerate next next index
 		b 3

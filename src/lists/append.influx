@@ -7,7 +7,7 @@ append
 assert
 	query
 		list
-			item 3
+			lastItem 3
 		item 4
 	expect
 		a query append length
@@ -17,7 +17,7 @@ assert
 assert
 	query
 		list
-			item 3
+			lastItem 3
 		item 4
 	expect
 		a query append item
@@ -27,10 +27,10 @@ assert
 assert
 	query
 		list
-			item 3
+			lastItem 3
 		item 4
 	expect
-		a query append next item
+		a query append next lastItem
 		b 4
 	output expect equal
 
@@ -39,7 +39,7 @@ assert
 		list
 			item 3
 			next
-				item 5
+				lastItem 5
 		item 4
 	expect
 		a query append length
@@ -51,7 +51,7 @@ assert
 		list
 			item 3
 			next
-				item 5
+				lastItem 5
 		item 4
 	expect
 		a query append item
@@ -63,7 +63,7 @@ assert
 		list
 			item 3
 			next
-				item 5
+				lastItem 5
 		item 4
 	expect
 		a query append next item
@@ -75,9 +75,9 @@ assert
 		list
 			item 3
 			next
-				item 5
+				lastItem 5
 		item 4
 	expect
-		a query append next next item
+		a query append next next lastItem
 		b 4
 	output expect equal

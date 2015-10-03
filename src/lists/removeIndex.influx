@@ -19,17 +19,17 @@ removeIndex
 		b 1
 	selector
 		a input list item
-		b input list next item
+		b input list next lastItem
 		on pair lessEqual
 	output
-		item selector switch
+		lastItem selector switch
 
 assert
 	query
 		list
 			item 5
 			next 
-				item 3
+				lastItem 3
 		index 1
 	expect
 		a query removeIndex length
@@ -41,10 +41,10 @@ assert
 		list
 			item 5
 			next 
-				item 3
+				lastItem 3
 		index 1
 	expect
-		a query removeIndex item
+		a query removeIndex lastItem
 		b 3
 	output expect equal
 	
@@ -53,7 +53,7 @@ assert
 		list
 			item 5
 			next 
-				item 3
+				lastItem 3
 		index 2
 	expect
 		a query removeIndex length
@@ -65,10 +65,10 @@ assert
 		list
 			item 5
 			next 
-				item 3
+				lastItem 3
 		index 2
 	expect
-		a query removeIndex item
+		a query removeIndex lastItem
 		b 5
 	output expect equal
 	
@@ -79,7 +79,7 @@ assert
 			next 
 				item 3
 				next
-					item 8
+					lastItem 8
 		index 1
 	expect
 		a query removeIndex item
@@ -93,10 +93,10 @@ assert
 			next 
 				item 3
 				next
-					item 8
+					lastItem 8
 		index 1
 	expect
-		a query removeIndex next item
+		a query removeIndex next lastItem
 		b 8
 	output expect equal
 	
@@ -107,7 +107,7 @@ assert
 			next 
 				item 3
 				next
-					item 8
+					lastItem 8
 		index 2
 	expect
 		a query removeIndex length
@@ -121,7 +121,7 @@ assert
 			next 
 				item 3
 				next
-					item 8
+					lastItem 8
 		index 2
 	expect
 		a query removeIndex item
@@ -135,10 +135,10 @@ assert
 			next 
 				item 3
 				next
-					item 8
+					lastItem 8
 		index 2
 	expect
-		a query removeIndex next item
+		a query removeIndex next lastItem
 		b 8
 	output expect equal
 	
@@ -149,7 +149,7 @@ assert
 			next 
 				item 3
 				next
-					item 8
+					lastItem 8
 		index 3
 	expect
 		a query removeIndex length
@@ -163,7 +163,7 @@ assert
 			next 
 				item 3
 				next
-					item 8
+					lastItem 8
 		index 3
 	expect
 		a query removeIndex item
@@ -177,9 +177,9 @@ assert
 			next 
 				item 3
 				next
-					item 8
+					lastItem 8
 		index 3
 	expect
-		a query removeIndex next item
+		a query removeIndex next lastItem
 		b 3
 	output expect equal

@@ -1,15 +1,16 @@
 reverse
-	output input
-	
-reverse
 	move
 		item input last
 		list input removeLast reverse
 	output move prepend
+	
+reverse
+	output
+		lastItem input lastItem
 
 assert
 	list
-		item 3
+		lastItem 3
 	expect
 		a list reverse length
 		b 1
@@ -17,9 +18,9 @@ assert
 
 assert
 	list
-		item 3
+		lastItem 3
 	expect
-		a list reverse item
+		a list reverse lastItem
 		b 3
 	output expect equal
 
@@ -27,7 +28,7 @@ assert
 	list
 		item 3
 		next
-			item 5
+			lastItem 5
 	expect
 		a list reverse length
 		b 2
@@ -37,7 +38,7 @@ assert
 	list
 		item 3
 		next
-			item 5
+			lastItem 5
 	expect
 		a list reverse item
 		b 5
@@ -47,9 +48,9 @@ assert
 	list
 		item 3
 		next
-			item 5
+			lastItem 5
 	expect
-		a list reverse next item
+		a list reverse next lastItem
 		b 3
 	output expect equal
 	
@@ -60,7 +61,7 @@ assert
 		next
 			item 5
 			next
-				item 8
+				lastItem 8
 	expect
 		a list reverse length
 		b 3
@@ -72,7 +73,7 @@ assert
 		next
 			item 5
 			next
-				item 8
+				lastItem 8
 	expect
 		a list reverse item
 		b 8
@@ -84,7 +85,7 @@ assert
 		next
 			item 5
 			next
-				item 8
+				lastItem 8
 	expect
 		a list reverse next item
 		b 5
@@ -96,8 +97,8 @@ assert
 		next
 			item 5
 			next
-				item 8
+				lastItem 8
 	expect
-		a list reverse next next item
+		a list reverse next next lastItem
 		b 3
 	output expect equal

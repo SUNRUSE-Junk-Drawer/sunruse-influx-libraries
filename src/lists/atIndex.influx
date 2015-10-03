@@ -12,12 +12,12 @@ atIndex
 	output selector switch
 	
 atIndex
-	output input list item
+	output input list lastItem
 
 assert
 	query
 		list
-			item 5
+			lastItem 5
 		index 1
 	expect
 		a query atIndex
@@ -29,7 +29,7 @@ assert
 		list
 			item 5
 			next
-				item 9
+				lastItem 9
 		index 1
 	expect
 		a query atIndex
@@ -41,7 +41,7 @@ assert
 		list
 			item 5
 			next
-				item 9
+				lastItem 9
 		index 2
 	expect
 		a query atIndex
@@ -55,7 +55,7 @@ assert
 			next
 				item 9
 				next
-					item 4
+					lastItem 4
 		index 1
 	expect
 		a query atIndex
@@ -69,7 +69,7 @@ assert
 			next
 				item 9
 				next
-					item 4
+					lastItem 4
 		index 2
 	expect
 		a query atIndex
@@ -83,7 +83,7 @@ assert
 			next
 				item 9
 				next
-					item 4
+					lastItem 4
 		index 3
 	expect
 		a query atIndex

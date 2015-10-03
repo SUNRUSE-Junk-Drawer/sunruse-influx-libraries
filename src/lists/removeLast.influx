@@ -1,22 +1,22 @@
 removeLast
-	output
-		item input item
-		
-		# We have to do nothing with the last one to end the search for new items.
-		_unused input next
-		
-removeLast
 	output 
 		item input item
 		next input next removeLast
+
+removeLast
+	output 
+		lastItem input item
+		
+		# Needed to resolve ambiguity when in the middle of a list.
+		_unused input next lastItem
 
 assert
 	list
 		item 3
 		next
-			item 5
+			lastItem 5
 	expect
-		a list removeLast item
+		a list removeLast lastItem
 		b 3
 	output expect equal
 
@@ -24,7 +24,7 @@ assert
 	list
 		item 3
 		next
-			item 5
+			lastItem 5
 	expect
 		a list removeLast length
 		b 1
@@ -36,7 +36,7 @@ assert
 		next
 			item 5
 			next
-				item 6
+				lastItem 6
 	expect
 		a list removeLast item
 		b 3
@@ -48,9 +48,9 @@ assert
 		next
 			item 5
 			next
-				item 6
+				lastItem 6
 	expect
-		a list removeLast next item
+		a list removeLast next lastItem
 		b 5
 	output expect equal
 
@@ -60,7 +60,7 @@ assert
 		next
 			item 5
 			next
-				item 6
+				lastItem 6
 	expect
 		a list removeLast length
 		b 2

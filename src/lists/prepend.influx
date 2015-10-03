@@ -6,7 +6,7 @@ prepend
 assert
 	query
 		list
-			item 3
+			lastItem 3
 		item 4
 	expect
 		a query prepend length
@@ -16,7 +16,7 @@ assert
 assert
 	query
 		list
-			item 3
+			lastItem 3
 		item 4
 	expect
 		a query prepend item
@@ -26,10 +26,10 @@ assert
 assert
 	query
 		list
-			item 3
+			lastItem 3
 		item 4
 	expect
-		a query prepend next item
+		a query prepend next lastItem
 		b 3
 	output expect equal
 	
@@ -38,7 +38,7 @@ assert
 		list
 			item 3
 			next
-				item 5
+				lastItem 5
 		item 4
 	expect
 		a query prepend length
@@ -50,7 +50,7 @@ assert
 		list
 			item 3
 			next
-				item 5
+				lastItem 5
 		item 4
 	expect
 		a query prepend item
@@ -62,7 +62,7 @@ assert
 		list
 			item 3
 			next
-				item 5
+				lastItem 5
 		item 4
 	expect
 		a query prepend next item
@@ -74,9 +74,9 @@ assert
 		list
 			item 3
 			next
-				item 5
+				lastItem 5
 		item 4
 	expect
-		a query prepend next next item
+		a query prepend next next lastItem
 		b 5
 	output expect equal

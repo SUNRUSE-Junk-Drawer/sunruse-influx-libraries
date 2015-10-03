@@ -1,9 +1,12 @@
 first
 	output input item
 	
+first
+	output input lastItem
+	
 assert
 	list
-		item 3
+		lastItem 3
 	expect
 		a list first
 		b 3
@@ -13,7 +16,7 @@ assert
 	list
 		item 3
 		next
-			item 4
+			lastItem 4
 	expect
 		a list first
 		b 3
@@ -25,7 +28,7 @@ assert
 		next
 			item 4
 			next
-				item 5
+				lastItem 5
 	expect
 		a list first
 		b 3
