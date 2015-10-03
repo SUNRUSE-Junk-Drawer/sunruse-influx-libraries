@@ -1,9 +1,10 @@
 length
 	# Needed to resolve ambiguity.
 	selector
+		discard input lastItem
 		a 1
 		b 1
-		on input lastItem split equal
+		on true
 	output selector switch
 	
 length
