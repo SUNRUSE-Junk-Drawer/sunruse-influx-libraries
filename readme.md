@@ -196,10 +196,10 @@ Given:
 * index: The 1-based index to remove an item at.
 Returns a list, containing "list" without the item at "index".
 
-#### sortAscending (unimplemented)
+#### sortAscending
 Given a list, returns the items sorted ascending, i.e. 1, 2, 3.  Uses the "greater" function to compare.
 
-#### sortDescending (unimplemented)
+#### sortDescending
 Given a list, returns the items sorted descending, i.e. 3, 2, 1.  Uses the "greater" function to compare.
 
 #### replace (unimplemented)
