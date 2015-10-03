@@ -251,6 +251,7 @@ Given:
 Calls the "predicate" function for each item in "list", with the following as input:
 * item: The item to map.
 * data: "data" from the input.
+* index: The 1-based position in the list of this item.
 And returns the number of "predicate" calls which returned true, as an integer.
 
 #### all (unimplemented)
@@ -260,6 +261,7 @@ Given:
 Calls the "predicate" function for each item in "list", with the following as input:
 * item: The item to map.
 * data: "data" from the input.
+* index: The 1-based position in the list of this item.
 And returns true when every call to "predicate" returns true, else, false.
 
 #### any (unimplemented)
@@ -269,6 +271,7 @@ Given:
 Calls the "predicate" function for each item in "list", with the following as input:
 * item: The item to map.
 * data: "data" from the input.
+* index: The 1-based position in the list of this item.
 And returns true when at least one call to "predicate" returns true, else, false.
 
 #### none (unimplemented)
@@ -278,6 +281,7 @@ Given:
 Calls the "predicate" function for each item in "list", with the following as input:
 * item: The item to map.
 * data: "data" from the input.
+* index: The 1-based position in the list of this item.
 And returns false when at least one call to "predicate" returns true, else, true.
 
 #### sortAscending
