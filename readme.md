@@ -236,10 +236,13 @@ Given a pair of lists, returns a single list containing all the items in "a", th
 Given:
 * list: A list to map.
 * data: Arbitrary data to include when mapping items.
-Calls the "map" function for each item in "list", with the following as input:
+Calls the "performMap" function for each item in "list", with the following as input:
 * item: The item to map.
-* data: "data" from the input.
-And returns the result of each "map" call in a list in order.
+* data: "data" from the input or processing the previous item.
+* index: The 1-based position in the list of this item.
+This should return:
+* item: An item to store in the returned list at this position.
+* data: The "data" to pass when processing the next item.
 
 #### count (unimplemented)
 Given:
@@ -249,6 +252,33 @@ Calls the "predicate" function for each item in "list", with the following as in
 * item: The item to map.
 * data: "data" from the input.
 And returns the number of "predicate" calls which returned true, as an integer.
+
+#### all (unimplemented)
+Given:
+* list: A list to count.
+* data: Arbitrary data to include when mapping items.
+Calls the "predicate" function for each item in "list", with the following as input:
+* item: The item to map.
+* data: "data" from the input.
+And returns true when every call to "predicate" returns true, else, false.
+
+#### any (unimplemented)
+Given:
+* list: A list to count.
+* data: Arbitrary data to include when mapping items.
+Calls the "predicate" function for each item in "list", with the following as input:
+* item: The item to map.
+* data: "data" from the input.
+And returns true when at least one call to "predicate" returns true, else, false.
+
+#### none (unimplemented)
+Given:
+* list: A list to count.
+* data: Arbitrary data to include when mapping items.
+Calls the "predicate" function for each item in "list", with the following as input:
+* item: The item to map.
+* data: "data" from the input.
+And returns false when at least one call to "predicate" returns true, else, true.
 
 #### sortAscending
 Given:

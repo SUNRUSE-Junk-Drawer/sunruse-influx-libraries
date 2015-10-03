@@ -1,0 +1,344 @@
+map
+	call
+		list input list
+		data input data
+		index 1
+	output call _map
+	
+_map
+	call
+		item input list item
+		data input data
+		index input index
+	result call performMap
+	next
+		list input list removeFirst
+		data result data
+		index input index increment
+	output
+		item result item
+		next next _map
+		
+_map
+	call
+		item input list lastItem
+		data input data
+		index input index
+	result call performMap
+	output
+		lastItem result item
+
+# A test function used in the below assertions.
+performMap
+	output
+		item 
+			whatWasGiven input
+		data
+			mapTest
+				willDouble input data mapTest willDouble double 
+
+assert
+	query
+		list
+			lastItem 7
+		data
+			mapTest
+				willDouble 3
+	expect
+		a query map length
+		b 1
+	output expect equal
+	
+assert
+	query
+		list
+			lastItem 7
+		data
+			mapTest
+				willDouble 3
+	expect
+		a query map lastItem whatWasGiven item
+		b 7
+	output expect equal
+	
+assert
+	query
+		list
+			lastItem 7
+		data
+			mapTest
+				willDouble 3
+	expect
+		a query map lastItem whatWasGiven data mapTest willDouble
+		b 3
+	output expect equal
+	
+assert
+	query
+		list
+			lastItem 7
+		data
+			mapTest
+				willDouble 3
+	expect
+		a query map lastItem whatWasGiven index
+		b 1
+	output expect equal
+	
+assert
+	query
+		list
+			item 7
+			next
+				lastItem 4
+		data
+			mapTest
+				willDouble 3
+	expect
+		a query map length
+		b 2
+	output expect equal
+	
+assert
+	query
+		list
+			item 7
+			next
+				lastItem 4
+		data
+			mapTest
+				willDouble 3
+	expect
+		a query map item whatWasGiven item
+		b 7
+	output expect equal
+	
+assert
+	query
+		list
+			item 7
+			next
+				lastItem 4
+		data
+			mapTest
+				willDouble 3
+	expect
+		a query map item whatWasGiven data mapTest willDouble
+		b 3
+	output expect equal
+	
+assert
+	query
+		list
+			item 7
+			next
+				lastItem 4
+		data
+			mapTest
+				willDouble 3
+	expect
+		a query map item whatWasGiven index
+		b 1
+	output expect equal
+	
+assert
+	query
+		list
+			item 7
+			next
+				lastItem 4
+		data
+			mapTest
+				willDouble 3
+	expect
+		a query map next lastItem whatWasGiven item
+		b 4
+	output expect equal
+	
+assert
+	query
+		list
+			item 7
+			next
+				lastItem 4
+		data
+			mapTest
+				willDouble 3
+	expect
+		a query map next lastItem whatWasGiven data mapTest willDouble
+		b 6
+	output expect equal
+	
+assert
+	query
+		list
+			item 7
+			next
+				lastItem 4
+		data
+			mapTest
+				willDouble 3
+	expect
+		a query map next lastItem whatWasGiven index
+		b 2
+	output expect equal
+	
+assert
+	query
+		list
+			item 7
+			next
+				item 4
+				next
+					lastItem 8 
+		data
+			mapTest
+				willDouble 3
+	expect
+		a query map length
+		b 3
+	output expect equal
+	
+assert
+	query
+		list
+			item 7
+			next
+				item 4
+				next
+					lastItem 8 
+		data
+			mapTest
+				willDouble 3
+	expect
+		a query map item whatWasGiven item
+		b 7
+	output expect equal
+	
+assert
+	query
+		list
+			item 7
+			next
+				item 4
+				next
+					lastItem 8 
+		data
+			mapTest
+				willDouble 3
+	expect
+		a query map item whatWasGiven data mapTest willDouble
+		b 3
+	output expect equal
+	
+assert
+	query
+		list
+			item 7
+			next
+				item 4
+				next
+					lastItem 8 
+		data
+			mapTest
+				willDouble 3
+	expect
+		a query map item whatWasGiven index
+		b 1
+	output expect equal
+	
+assert
+	query
+		list
+			item 7
+			next
+				item 4
+				next
+					lastItem 8 
+		data
+			mapTest
+				willDouble 3
+	expect
+		a query map next item whatWasGiven item
+		b 4
+	output expect equal
+	
+assert
+	query
+		list
+			item 7
+			next
+				item 4
+				next
+					lastItem 8 
+		data
+			mapTest
+				willDouble 3
+	expect
+		a query map next item whatWasGiven data mapTest willDouble
+		b 6
+	output expect equal
+	
+assert
+	query
+		list
+			item 7
+			next
+				item 4
+				next
+					lastItem 8 
+		data
+			mapTest
+				willDouble 3
+	expect
+		a query map next item whatWasGiven index
+		b 2
+	output expect equal
+	
+assert
+	query
+		list
+			item 7
+			next
+				item 4
+				next
+					lastItem 8 
+		data
+			mapTest
+				willDouble 3
+	expect
+		a query map next next lastItem whatWasGiven item
+		b 8
+	output expect equal
+	
+assert
+	query
+		list
+			item 7
+			next
+				item 4
+				next
+					lastItem 8 
+		data
+			mapTest
+				willDouble 3
+	expect
+		a query map next next lastItem whatWasGiven data mapTest willDouble
+		b 12
+	output expect equal
+	
+assert
+	query
+		list
+			item 7
+			next
+				item 4
+				next
+					lastItem 8 
+		data
+			mapTest
+				willDouble 3
+	expect
+		a query map next next lastItem whatWasGiven index
+		b 3
+	output expect equal
