@@ -284,7 +284,7 @@ Calls the "predicate" function for each item in "list", with the following as in
 * index: The 1-based position in the list of this item.
 And returns false when at least one call to "predicate" returns true, else, true.
 
-#### sortAscending
+#### sortAscending (unimplemented)
 Given:
 * list: A list to sort.
 * data: Arbitrary data to include when mapping items.
@@ -293,7 +293,7 @@ Calls the "index" function for each item in "list", with the following as input:
 * data: "data" from the input.
 And returns the input list, sorted by the result of "index", ascending.
 
-#### sortDescending
+#### sortDescending (unimplemented)
 Given:
 * list: A list to sort.
 * data: Arbitrary data to include when mapping items.
